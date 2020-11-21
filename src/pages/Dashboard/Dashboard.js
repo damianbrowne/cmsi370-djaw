@@ -11,7 +11,7 @@ import {
     makeStyles,
 } from '@material-ui/core'
 
-
+import HeaderFrame from '../../common/HeaderFrame.js'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,6 +26,7 @@ export default function SignUp() {
 
   return (
     <Container className={classes.root}>
+        <HeaderFrame />
         <Typography>
             HELLO
         </Typography>
