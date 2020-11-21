@@ -1,25 +1,66 @@
-import logo from './logo.svg';
-// import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import { ThemeProvider } from '@material-ui/core/styles';
 
-function App() {
+import CssBaseline from '@material-ui/core/CssBaseline';
+import theme from './assets/theme.js';
+
+import SignUp from './pages/Login/LoginPages/SignUp.js';
+import Login from './pages/Login/LoginPages/Login.js';
+import Dashboard from './pages/Dashboard/Dashboard.js';
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/SignUp">Signup</Link>
+              </li>
+              <li>
+                <Link to="/Login">Login</Link>
+              </li>
+            </ul>
+          </nav>
+          {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+          <Switch>
+            <Route path="/SignUp">
+              <SignUp />
+            </Route>
+            <Route path="/Login">
+              <Login />
+            </Route>
+            <Route path="/">
+              <Dashboard />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
-export default App;
+// function Home() {
+//   return <h2>Home</h2>;
+// }
+
+// function SignUp() {
+//   return <h2>SignUp</h2>;
+// }
+
+// function Login() {
+//   return <h2>Login</h2>;
+// }
