@@ -32,6 +32,12 @@ export default function Courses() {
         <Typography>
             COURSES PAGE
         </Typography>
+        <Button>
+            VIDEO 1
+        </Button>
+        <Button>
+            VIDEO 2
+        </Button>
     </div>
   );
 }
