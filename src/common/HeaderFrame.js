@@ -14,6 +14,13 @@ import {
   
 } from '@material-ui/core'
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 const useStyles = makeStyles((theme) => ({
   root: {
   },
@@ -25,7 +32,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     color:"white",
-    fontWeight:"bold"
+    fontWeight:"bold",
+    textDecoration:"none",
+    fontSize: 16,
   },
 
   popoverPaper: {
@@ -57,9 +66,9 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Relab
-          </Typography>
+          <Link to="/Dashboard/Home" className={classes.title}>
+              Relab
+          </Link>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={handleAvatarClick}>
             <MenuIcon />
           </IconButton>

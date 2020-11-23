@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useContext } from 'react'
 
 import {
     Container,
@@ -11,8 +11,21 @@ import {
     makeStyles,
 } from '@material-ui/core'
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+
+import { useParams } from 'react-router'
+
+
 import HeaderFrame from '../../common/HeaderFrame.js'
+import Home from './DashboardPages/Home.js';
 import monkey from '../../assets/images/monkey.jpg'
+import Progress from './DashboardPages/Progress.js';
+import Topic from './DashboardPages/Topic.js';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
         padding: 25,
         display:"flex",
         alignItems:"center",
+        flexDirection:"row",
     },
 
     avatar: {
@@ -39,6 +53,12 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 100,
         maxHeight: 100,
         minHeight: 100,
+    },
+
+    profileMenu: {
+        marginLeft: 20,
+        display:"flex",
+        flexDirection:"column",
     },
 
     body: {
@@ -66,24 +86,56 @@ const useStyles = makeStyles((theme) => ({
 
 }),{ name: 'Dashboard' });
 
-export default function SignUp() {
+const Dashboard = props => {
   const classes = useStyles();
+//   const { page } = props
+//   let { id } = useParams()
+
+
+// NOT OPTIMAL ROUTING -> RELOADING EVERY TIME ROUTE OCCURS
+  const routeToProgress  = () => {
+    window.open("/Dashboard/Progress", "_self");
+    console.log("PROGRESS")
+  }
+
+  const routeToCourses  = () => {
+    window.open("/Dashboard/Topic", "_self");
+    console.log("COURSES")
+  }
+
   return (
     <div className={classes.root}>
         <HeaderFrame />
         <Paper className={classes.profileContainer} elevation={2}>
-            <Avatar className={classes.avatar} alt="PROFILE" src={monkey} />
+            <Avatar className={classes.avatar} alt="PROFILE" src={monkey}/>
+            <div className={classes.profileMenu}>
+                <Typography>John Doe</Typography>
+                <Typography>@johndoe123</Typography>
+                <Button>Edit Profile</Button>
+            </div>
         </Paper>
         <div className={classes.body}>
             <Paper className={classes.leftPanel} elevation={2}>
                 <Typography>Menu</Typography>
-                <Button>Courses</Button>
-                <Button>Progress</Button>
+                <Button onClick={routeToCourses}>Courses</Button>
+                <Button onClick={routeToProgress}>Progress</Button>
             </Paper>
             <Paper className={classes.rightPanel} elevation={2}>
-                RIGHT
+                <Switch>
+                    <Route path="/Dashboard/Home">
+                        <Home />
+                    </Route>
+                    <Route path="/Dashboard/Progress">
+                        <Progress />
+                    </Route>
+                    <Route path="/Dashboard/Topic">
+                        <Topic />
+                    </Route>
+                </Switch>
             </Paper>
         </div>
     </div>
   );
 }
+
+export default Dashboard;

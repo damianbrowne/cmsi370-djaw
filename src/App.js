@@ -14,6 +14,9 @@ import SignUp from './pages/Login/LoginPages/SignUp.js';
 import Login from './pages/Login/LoginPages/Login.js';
 import Dashboard from './pages/Dashboard/Dashboard.js';
 
+import Home from './pages/Dashboard/DashboardPages/Home.js';
+import Progress from './pages/Dashboard/DashboardPages/Progress.js';
+import Topic from './pages/Dashboard/DashboardPages/Topic.js';
 
 export default function App() {
   return (
@@ -24,7 +27,7 @@ export default function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/Dashboard/Home">Home</Link>
               </li>
               <li>
                 <Link to="/SignUp">Signup</Link>
@@ -43,7 +46,7 @@ export default function App() {
             <Route path="/Login">
               <Login />
             </Route>
-            <Route path="/">
+            <Route path="/Dashboard/:id">
               <Dashboard />
             </Route>
           </Switch>
