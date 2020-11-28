@@ -103,6 +103,11 @@ const Dashboard = props => {
     console.log("COURSES")
   }
 
+  const routeToSettings  = () => {
+    window.open("/UserProfile/Settings", "_self");
+    console.log("SETTINGS")
+    }
+
   return (
     <div className={classes.root}>
         <HeaderFrame />
@@ -111,7 +116,7 @@ const Dashboard = props => {
             <div className={classes.profileMenu}>
                 <Typography>John Doe</Typography>
                 <Typography>@johndoe123</Typography>
-                <Button>Edit Profile</Button>
+                <Button onClick={routeToSettings}>Edit Profile</Button>
             </div>
         </Paper>
         <div className={classes.body}>

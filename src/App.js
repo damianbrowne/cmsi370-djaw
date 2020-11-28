@@ -13,6 +13,7 @@ import theme from './assets/theme.js';
 import SignUp from './pages/Login/LoginPages/SignUp.js';
 import Login from './pages/Login/LoginPages/Login.js';
 import Dashboard from './pages/Dashboard/Dashboard.js';
+import UserProfile from './pages/UserProfile/UserProfile.js';
 
 import Home from './pages/Dashboard/DashboardPages/Home.js';
 import Progress from './pages/Dashboard/DashboardPages/Progress.js';

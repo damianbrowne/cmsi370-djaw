@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     color:"white",
     fontWeight:"bold",
     textDecoration:"none",
-    fontSize: 16,
+    fontSize: 24,
   },
 
   popoverPaper: {
@@ -48,61 +48,91 @@ const useStyles = makeStyles((theme) => ({
     flex: 1, 
     display:"flex",
     flexDirection:"column",
+  },
+
+  accountButtons: {
+    marginRight: 10
   }
 }));
 
 export default function ButtonAppBar() {
-  const classes = useStyles();
-  const [anchor, setAnchor] = useState(null)
+    const classes = useStyles();
+    const [anchor, setAnchor] = useState(null)
 
-  const handleAvatarClick = event => {
-    setAnchor(event.currentTarget) // visually anchor the popup to the button
-  }
+    const handleAvatarClick = event => {
+        setAnchor(event.currentTarget) // visually anchor the popup to the button
+    }
 
-  const handleAvatarClose = () => setAnchor(null)
+    const handleAvatarClose = () => setAnchor(null)
+
+    const routeToSettings  = () => {
+        window.open("/UserProfile/Settings", "_self");
+        console.log("SETTINGS")
+    }
+
+    const routeToLogIn  = () => {
+        window.open("/Login", "_self");
+        console.log("SETTINGS")
+    }
+
+    const routeToSignup  = () => {
+        window.open("/Signup", "_self");
+        console.log("SETTINGS")
+    }
+
+    return (
+        <div className={classes.root}>
+            <AppBar position="static">
+                <Toolbar>
+                    <Link to="/Dashboard/Home" className={classes.title}>
+                        Relab
+                    </Link>
+                    <Button 
+                        variant="outlined" 
+                        className={classes.accountButtons}
+                        onClick={routeToLogIn}
+                    >
+                        Login
+                    </Button>
+                    <Button 
+                        variant="outlined" 
+                        className={classes.accountButtons}
+                        onClick={routeToSignup}
+                    > 
+                        Sign Up
+                    </Button>
+                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={handleAvatarClick}>
+                        <MenuIcon />
+                    </IconButton>
+                    <Popover
+                        classes={{paper: classes.popoverPaper}}
+                        anchorEl={anchor}
+                        open={Boolean(anchor)}
+                        onClose={handleAvatarClose}
+                        anchorOrigin={{
+                            // Location of the anchor on the button
+                            vertical: 'bottom',
+                            horizontal: 'right',
+                        }}
+                        transformOrigin={{
+                            // Anchor on the popover itself
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                    >
+                        <div className={classes.popoverMenu}>
+                            <Button onClick={routeToSettings}>
+                                Settings
+                            </Button>
+                            <Button>
+                                Customization
+                            </Button>
+                        </div>
 
 
-  return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <Link to="/Dashboard/Home" className={classes.title}>
-              Relab
-          </Link>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={handleAvatarClick}>
-            <MenuIcon />
-          </IconButton>
-          <Popover
-            classes={{
-              paper: classes.popoverPaper,
-            }}
-            anchorEl={anchor}
-            open={Boolean(anchor)}
-            onClose={handleAvatarClose}
-            anchorOrigin={{
-              // Location of the anchor on the button
-              vertical: 'bottom',
-              horizontal: 'right',
-            }}
-            transformOrigin={{
-              // Anchor on the popover itself
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-          >
-            <div className={classes.popoverMenu}>
-              <Button>
-                FUNCTION 1
-              </Button>
-              <Button>
-                FUNCTION 2
-              </Button>
-            </div>
-
-
-          </Popover>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+                    </Popover>
+                </Toolbar>
+            </AppBar>
+        </div>
+    );
 }
