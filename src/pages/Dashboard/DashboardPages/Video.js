@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
 
 }),{ name: 'Video' });
 
-export default function Video() {
-  const classes = useStyles();
+const Video = props => {
+  const classes = useStyles(props);
 
   const [openVideo, setVideoOpen] = React.useState(false);
 
@@ -46,7 +46,7 @@ export default function Video() {
     <div className={classes.root}>
 
         <Button onClick={handleOpen}>
-            VIDEO
+            {props.title}
         </Button>
         <Modal
             className={classes.modalPaper}
@@ -61,7 +61,7 @@ export default function Video() {
             <Fade in={openVideo}>
                 <Paper >
                     <Typography >
-                        HELLO
+                        {props.title}
                     </Typography>
                 </Paper>
             </Fade>
@@ -69,3 +69,5 @@ export default function Video() {
     </div>
   );
 }
+
+export default Video;

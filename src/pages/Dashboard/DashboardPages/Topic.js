@@ -33,7 +33,8 @@ export default function Courses() {
         <Typography>
             COURSES PAGE
         </Typography>
-        <Video />
+        <Video title="VIDEO TITLE 1"/>
+        <Video title="VIDEO TITLE 2"/>
     </div>
   );
 }
