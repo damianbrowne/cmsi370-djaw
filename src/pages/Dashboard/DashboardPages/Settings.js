@@ -1,19 +1,9 @@
 import React from 'react';
 
 import {
-    Container,
-    Avatar,
-    Button,
-    Paper,
-    TextField,
-    Grid,
     Typography,
     makeStyles,
 } from '@material-ui/core'
-
-import { useParams } from 'react-router'
-import monkey from '../../../assets/images/monkey.jpg'
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -49,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
         minHeight: 100,
         borderRadius: 50,
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)'
-
     },
 
     title: {
@@ -64,7 +53,6 @@ const useStyles = makeStyles((theme) => ({
         fontWeight:"bold",
         fontSize: 22, 
         fontFamily:"Avenir",
-        // color:"#414141"
     },
 
     username: {
@@ -77,7 +65,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Settings() {
   const classes = useStyles();
-  let { id } = useParams()
 
   return (
     <div className={classes.root}>

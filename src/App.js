@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import { ThemeProvider } from '@material-ui/core/styles';
 
@@ -13,10 +12,6 @@ import theme from './assets/theme.js';
 import SignUp from './pages/Login/LoginPages/SignUp.js';
 import Login from './pages/Login/LoginPages/Login.js';
 import Dashboard from './pages/Dashboard/Dashboard.js';
-
-import Home from './pages/Dashboard/DashboardPages/Home.js';
-import Progress from './pages/Dashboard/DashboardPages/Progress.js';
-import Topic from './pages/Dashboard/DashboardPages/Topic.js';
 
 export default function App() {
   return (
@@ -42,15 +37,3 @@ export default function App() {
     </ThemeProvider>
   );
 }
-
-// function Home() {
-//   return <h2>Home</h2>;
-// }
-
-// function SignUp() {
-//   return <h2>SignUp</h2>;
-// }
-
-// function Login() {
-//   return <h2>Login</h2>;
-// }

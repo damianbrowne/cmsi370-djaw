@@ -11,16 +11,12 @@ import {
   IconButton,
   makeStyles,
   Popover,
-  Paper,
   Avatar,
   Divider
   
 } from '@material-ui/core'
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 

@@ -1,18 +1,12 @@
-import React, { useState, useContext } from 'react'
+import React from 'react'
 
 import {
-    Container,
-    Avatar,
     Button,
-    Paper,
-    TextField,
-    Grid,
     Typography,
     makeStyles,
 } from '@material-ui/core'
 
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
   } from "react-router-dom";
@@ -27,9 +21,8 @@ import Customize from './DashboardPages/Customize.js';
 import AppsIcon from '@material-ui/icons/Apps';
 import SubjectIcon from '@material-ui/icons/Subject';
 import BarChartIcon from '@material-ui/icons/BarChart';
-import HomeIcon from '@material-ui/icons/Home';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         display:"flex",
         flexDirection:"column",
@@ -97,10 +90,10 @@ const useStyles = makeStyles((theme) => ({
 
 }),{ name: 'Dashboard' });
 
-const Dashboard = props => {
+const Dashboard = () => {
   const classes = useStyles();
 
-// NOT OPTIMAL ROUTING -> RELOADING EVERY TIME ROUTE OCCURS
+  // NOT OPTIMAL ROUTING -> RELOADING EVERY TIME ROUTE OCCURS
   const routeToProgress  = () => {
     window.open("/Progress", "_self");
     console.log("PROGRESS")
@@ -119,7 +112,6 @@ const Dashboard = props => {
   return (
     <div className={classes.root}>
         <HeaderFrame />
-
         <div className={classes.body}>
             <div className={classes.leftPanel} elevation={0}>
                 <Typography className={classes.title}>MENU</Typography>

@@ -1,21 +1,11 @@
 import React from 'react';
 
 import {
-    Container,
-    Avatar,
-    Button,
-    Paper,
-    TextField,
-    Grid,
     Typography,
     makeStyles,
 } from '@material-ui/core'
 
-import { useParams } from 'react-router'
-import monkey from '../../../assets/images/monkey.jpg'
-
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         display:"flex",
         flexDirection:"column",
@@ -64,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
         fontWeight:"bold",
         fontSize: 22, 
         fontFamily:"Avenir",
-        // color:"#414141"
     },
 
     username: {
@@ -77,7 +66,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Progress() {
   const classes = useStyles();
-  let { id } = useParams()
 
   return (
     <div className={classes.root}>
