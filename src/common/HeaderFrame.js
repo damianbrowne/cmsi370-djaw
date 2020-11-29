@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     color:"white",
     fontWeight:"bold",
     textDecoration:"none",
-    fontSize: 24,
+    fontSize: 16,
   },
 
   popoverPaper: {

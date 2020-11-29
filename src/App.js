@@ -31,6 +31,9 @@ export default function App() {
             <Route path="/">
               <Dashboard />
             </Route>
+            <Route path="/Survey">
+              <Survey />
+            </Route>
           </Switch>
         </div>
       </Router>
