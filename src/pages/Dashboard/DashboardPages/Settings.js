@@ -5,7 +5,7 @@ import {
     makeStyles,
 } from '@material-ui/core'
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         display:"flex",
         flexDirection:"column",
@@ -61,14 +61,14 @@ const useStyles = makeStyles(() => ({
         color:"#CFCFCF"
     }
 
-}),{ name: 'Progress' });
+}),{ name: 'Settings' });
 
-export default function Progress() {
+export default function Settings() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-        <Typography className={classes.title}>Progress</Typography>
+        <Typography className={classes.title}>Account Settings</Typography>
     </div>
   );
 }

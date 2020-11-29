@@ -39,6 +39,7 @@ const useStyles = makeStyles(() => ({
         minHeight: 100,
         borderRadius: 50,
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)'
+
     },
 
     title: {
@@ -68,7 +69,7 @@ export default function Progress() {
 
   return (
     <div className={classes.root}>
-        <Typography className={classes.title}>Progress</Typography>
+        <Typography className={classes.title}>Customize Avatar</Typography>
     </div>
   );
 }

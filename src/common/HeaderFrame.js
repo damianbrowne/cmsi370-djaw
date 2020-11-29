@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import MenuIcon from '@material-ui/icons/Menu';
+import logo from "../assets/images/logo.png";
 
 import { 
   AppBar, 
@@ -10,16 +11,17 @@ import {
   IconButton,
   makeStyles,
   Popover,
-  Paper,
+  Avatar,
+  Divider
   
 } from '@material-ui/core'
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
+
+import SettingsIcon from '@material-ui/icons/Settings';
+import TuneIcon from '@material-ui/icons/Tune';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,8 +40,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   popoverPaper: {
-    minWidth: 300,
-    maxWidth: 300,
+    minWidth: 275,
+    maxWidth: 275,
     paddingTop: 15,
     paddingBottom: 15,
   },
@@ -52,7 +54,44 @@ const useStyles = makeStyles((theme) => ({
 
   accountButtons: {
     marginRight: 10
-  }
+  },
+
+  menuItem: {
+    justifyContent:"left",
+    paddingTop: 14,
+    paddingBottom: 14,
+    paddingLeft: 27,
+    borderRadius: 0,
+  },
+
+  menuIcon: {
+    marginRight: 30, 
+    color:"#000000"
+  }, 
+
+  menuText: {
+    textTransform:"none", 
+    color: "#292F36", 
+    fontFamily:"Avenir",
+    fontSize: 18,
+  },
+
+  popoverTitle:{
+    fontSize: 22, 
+    fontFamily:"Arial",
+    alignSelf:"center",
+    color: "#CFCFCF",
+    paddingTop: 18, 
+    paddingBottom: 18, 
+  },
+
+  signOut:{
+    display:"flex",
+    justifyContent:"center", 
+    alignItems:"center",
+    marginTop: 0, 
+    marginBottom: 5,
+  },
 }));
 
 export default function ButtonAppBar() {
@@ -66,7 +105,7 @@ export default function ButtonAppBar() {
     const handleAvatarClose = () => setAnchor(null)
 
     const routeToSettings  = () => {
-        window.open("/UserProfile/Settings", "_self");
+        window.open("/Settings", "_self");
         console.log("SETTINGS")
     }
 
@@ -75,34 +114,21 @@ export default function ButtonAppBar() {
         console.log("SETTINGS")
     }
 
-    const routeToSignup  = () => {
-        window.open("/Signup", "_self");
-        console.log("SETTINGS")
+    const routeToCustomize  = () => {
+        window.open("/Customize", "_self");
+        console.log("CUSTOMIZE")
     }
 
     return (
         <div className={classes.root}>
-            <AppBar position="static">
+            <AppBar position="static" elevation={0}>
                 <Toolbar>
-                    <Link to="/Dashboard/Home" className={classes.title}>
+                    <Avatar src={logo} style = {{marginRight: 10, }}/>
+                    <Link to="/" className={classes.title}>
                         Relab
                     </Link>
-                    <Button 
-                        variant="outlined" 
-                        className={classes.accountButtons}
-                        onClick={routeToLogIn}
-                    >
-                        Login
-                    </Button>
-                    <Button 
-                        variant="outlined" 
-                        className={classes.accountButtons}
-                        onClick={routeToSignup}
-                    > 
-                        Sign Up
-                    </Button>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={handleAvatarClick}>
-                        <MenuIcon />
+                        <MenuIcon size="large"/>
                     </IconButton>
                     <Popover
                         classes={{paper: classes.popoverPaper}}
@@ -121,15 +147,22 @@ export default function ButtonAppBar() {
                         }}
                     >
                         <div className={classes.popoverMenu}>
-                            <Button onClick={routeToSettings}>
-                                Settings
+                            <Typography className={classes.popoverTitle}>My Account</Typography>
+                            <Button onClick={routeToSettings} className={classes.menuItem} disableTouchRipple>
+                                <SettingsIcon className={classes.menuIcon}/>
+                                <Typography className={classes.menuText}>Settings</Typography>
                             </Button>
-                            <Button>
-                                Customization
+                            <Button onClick={routeToCustomize} className={classes.menuItem} disableTouchRipple>
+                                <TuneIcon className={classes.menuIcon}/>
+                                <Typography className={classes.menuText}>Customize Avatar</Typography>
                             </Button>
+                            <Divider style={{marginTop: 20, marginBottom: 20, }}/>
+                            <div className={classes.signOut}>
+                                <Button style={{color:"#FF5B5B"}} onClick={routeToLogIn}>
+                                    Sign Out
+                                </Button>
+                            </div>
                         </div>
-
-
                     </Popover>
                 </Toolbar>
             </AppBar>

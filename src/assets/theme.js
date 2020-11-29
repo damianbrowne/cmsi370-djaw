@@ -3,7 +3,7 @@ const theme = createMuiTheme({
     palette: {
         background: { main: '#F6F4F4' },
         text: { main: '#292F36' },
-        primary: { main: '#5EB1FF' },
+        primary: { main: '#90C6F9' },
         secondary: { main: '#DA8FFF' },
         tertiary: { main: '#FFEB58' },
         success: { main: '#E35557' },

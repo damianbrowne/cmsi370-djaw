@@ -7,12 +7,10 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-// import Copyright from './Copyright'
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -21,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: theme.palette.background.main,
-    padding: '15px',
+    padding: 30,
     boxShadow: '0 5px 5px #aaa',
   },
   avatar: {
@@ -39,7 +37,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Login() {
   const classes = useStyles();
-
+  const toHomePage  = () => {
+    window.open("/", "_self");
+    console.log("HOME")
+  }
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -78,11 +79,12 @@ export default function Login() {
             label="Remember me"
           />
           <Button
-            type="submit"
+            // type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={toHomePage}
           >
             Login
           </Button>
@@ -93,16 +95,13 @@ export default function Login() {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="./Signup" variant="body2">
-                {"Don't have an account? Sign Up"}
+              <Link href="./SignUp" variant="body2">
+                {"Register"}
               </Link>
             </Grid>
           </Grid>
         </form>
       </div>
-      {/* <Box mt={4}>
-        <Copyright />
-      </Box> */}
     </Container>
   );
 }
