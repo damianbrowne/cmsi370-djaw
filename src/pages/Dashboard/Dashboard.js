@@ -21,6 +21,8 @@ import HeaderFrame from '../../common/HeaderFrame.js'
 import Home from './DashboardPages/Home.js';
 import Progress from './DashboardPages/Progress.js';
 import Topic from './DashboardPages/Topic.js';
+import Settings from './DashboardPages/Settings.js';
+import Customize from './DashboardPages/Customize.js';
 
 import AppsIcon from '@material-ui/icons/Apps';
 import SubjectIcon from '@material-ui/icons/Subject';
@@ -136,6 +138,12 @@ const Dashboard = props => {
             </div>
             <div className={classes.rightPanel}>
                 <Switch>
+                    <Route path="/Customize">
+                        <Customize />
+                    </Route>
+                    <Route path="/Settings">
+                        <Settings />
+                    </Route>
                     <Route path="/Progress">
                         <Progress />
                     </Route>
