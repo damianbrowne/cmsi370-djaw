@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: theme.palette.background.main,
-    padding: '15px',
+    padding: 30,
     boxShadow: '0 5px 5px #aaa',
   },
   avatar: {
@@ -39,7 +39,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Login() {
   const classes = useStyles();
-
+  const toHomePage  = () => {
+    window.open("/", "_self");
+    console.log("HOME")
+  }
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -78,11 +81,12 @@ export default function Login() {
             label="Remember me"
           />
           <Button
-            type="submit"
+            // type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={toHomePage}
           >
             Login
           </Button>
@@ -93,8 +97,8 @@ export default function Login() {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="./Register" variant="body2">
-                {"Don't have an account? Register"}
+              <Link href="./SignUp" variant="body2">
+                {"Register"}
               </Link>
             </Grid>
           </Grid>
