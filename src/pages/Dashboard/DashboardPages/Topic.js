@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: 28,
         fontFamily:"Arial",
         paddingBottom: 65,
-        paddingTop: 60,
+        paddingTop: 50,
     },
 
     videoContainer: {
@@ -66,7 +66,7 @@ export default function Courses() {
   return (
     <div className={classes.root}>
         <Typography className={classes.title}>
-            Live Courses
+            Live Classes
         </Typography>
         <div className={classes.videoContainer}>
             <Grid container spacing={1}>

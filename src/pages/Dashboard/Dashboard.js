@@ -19,7 +19,6 @@ import {
 
 import HeaderFrame from '../../common/HeaderFrame.js'
 import Home from './DashboardPages/Home.js';
-import monkey from '../../assets/images/monkey.jpg'
 import Progress from './DashboardPages/Progress.js';
 import Topic from './DashboardPages/Topic.js';
 
@@ -36,32 +35,10 @@ const useStyles = makeStyles((theme) => ({
         // padding: 10,
     },
 
-    profileContainer: {
-        marginTop: 10,
-        marginRight: 10,
-        marginLeft: 10,
-        minWidth: 1010,
-        maxHeight: 150,
-        flex: 0.25,
-        padding: 25,
-        display:"flex",
-        alignItems:"center",
-        flexDirection:"row",
-        backgroundColor:"white",
-    },
 
-    avatar: {
-        minWidth: 100,
-        maxWidth: 100,
-        maxHeight: 100,
-        minHeight: 100,
-    },
 
-    profileMenu: {
-        marginLeft: 20,
-        display:"flex",
-        flexDirection:"column",
-    },
+
+
 
     body: {
         display:"flex",
@@ -140,14 +117,7 @@ const Dashboard = props => {
   return (
     <div className={classes.root}>
         <HeaderFrame />
-        {/* <div className={classes.profileContainer} elevation={0}>
-            <Avatar className={classes.avatar} alt="PROFILE" src={monkey}/>
-            <div className={classes.profileMenu}>
-                <Typography>John Doe</Typography>
-                <Typography>@johndoe123</Typography>
-                <Button>Edit Profile</Button>
-            </div>
-        </div> */}
+
         <div className={classes.body}>
             <div className={classes.leftPanel} elevation={0}>
                 <Typography className={classes.title}>MENU</Typography>
@@ -157,7 +127,7 @@ const Dashboard = props => {
                 </Button>
                 <Button onClick={routeToCourses} className={classes.menuItem} disableTouchRipple>
                     <SubjectIcon className={classes.menuIcon}/>
-                    <Typography className={classes.menuText}>Courses</Typography>
+                    <Typography className={classes.menuText}>Classes</Typography>
                 </Button>
                 <Button onClick={routeToProgress} className={classes.menuItem} disableTouchRipple>
                     <BarChartIcon className={classes.menuIcon}/>
