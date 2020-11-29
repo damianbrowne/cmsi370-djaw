@@ -12,7 +12,6 @@ import theme from './assets/theme.js';
 import SignUp from './pages/Login/LoginPages/SignUp.js';
 import Login from './pages/Login/LoginPages/Login.js';
 import Dashboard from './pages/Dashboard/Dashboard.js';
-import UserProfile from './pages/UserProfile/UserProfile.js';
 
 export default function App() {
   return (
