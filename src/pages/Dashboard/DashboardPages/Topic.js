@@ -12,6 +12,7 @@ import {
 } from '@material-ui/core'
 
 import { useParams } from 'react-router'
+import Video from './Video.js';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -32,12 +33,7 @@ export default function Courses() {
         <Typography>
             COURSES PAGE
         </Typography>
-        <Button>
-            VIDEO 1
-        </Button>
-        <Button>
-            VIDEO 2
-        </Button>
+        <Video />
     </div>
   );
 }
