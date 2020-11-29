@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 export default function SignUp() {
   const classes = useStyles();
   const toHomePage  = () => {
-    window.open("/", "_self");
+    window.open("/Survey", "_self");
     console.log("HOME")
   }
   return (

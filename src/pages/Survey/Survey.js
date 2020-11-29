@@ -5,6 +5,7 @@ import Question1 from './Question/Question1';
 import Question2 from './Question/Question2';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,12 +13,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     padding: 4,
     justifyContent: 'center'
-  },
-  typography: {
-    maxWidth: 800,
-    margin: `${theme.spacing(1)}px auto`,
-    padding: theme.spacing(2),
-  },
+  }
 }));
 
 const firstMessages = ["Ideo sumi sae ima ente rari novi?", 
@@ -34,17 +30,27 @@ const firstMessages = ["Ideo sumi sae ima ente rari novi?",
 
 export default function Survey() {
   const classes = useStyles();
-
+  
   return (
     <div className={classes.root}>
-      <Typography className={classes.typography}>
+      <Typography 
+        component="h1" 
+        variant="outlined"
+        margin="normal"
+        align="center"
+        padding= "5px"
+      >
         Do not panic. This is a survey.
       </Typography>
       {firstMessages.map((item, index) => (
         <Question1 question = {item} index = {index+1}> </Question1>
       ))}   
       <Box textAlign='center'>
-        <Button variant='contained' color="primary">
+        <Button 
+          variant='contained' 
+          color="primary" 
+          href="/"
+        >
           Submit Survey
         </Button>
       </Box>
