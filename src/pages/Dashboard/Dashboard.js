@@ -15,17 +15,18 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
   } from "react-router-dom";
-
-import { useParams } from 'react-router'
-
 
 import HeaderFrame from '../../common/HeaderFrame.js'
 import Home from './DashboardPages/Home.js';
 import monkey from '../../assets/images/monkey.jpg'
 import Progress from './DashboardPages/Progress.js';
 import Topic from './DashboardPages/Topic.js';
+
+import AppsIcon from '@material-ui/icons/Apps';
+import SubjectIcon from '@material-ui/icons/Subject';
+import BarChartIcon from '@material-ui/icons/BarChart';
+import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -46,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
         display:"flex",
         alignItems:"center",
         flexDirection:"row",
+        backgroundColor:"white",
     },
 
     avatar: {
@@ -75,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
         flex: .2,
         marginRight: 10,
         minWidth: 250,
-        padding: 15,
+        backgroundColor:"white",
     },
 
     rightPanel: {
@@ -85,11 +87,34 @@ const useStyles = makeStyles((theme) => ({
     },
 
     title: {
-        backgroundColor:"blue",
-        fontFamily:"Avenir",
-        paddingTop: 25,
-        paddingBottom: 25
+        color: "#CFCFCF",
+        fontFamily:"Arial",
+        paddingTop: 32,
+        paddingBottom: 18,
+        paddingLeft: 27,
+        fontSize: 19,
     },
+    
+    menuItem: {
+        justifyContent:"left",
+        paddingTop: 22,
+        paddingBottom: 22,
+        paddingLeft: 27,
+        borderRadius: 0,
+    },
+    
+    menuIcon: {
+        marginRight: 30, 
+        color:"#000000"
+    }, 
+
+    menuText: {
+        textTransform:"none", 
+        color: "#292F36", 
+        fontWeight:"bold",
+        fontFamily:"Avenir",
+        fontSize: 18,
+    }
 
 }),{ name: 'Dashboard' });
 
@@ -98,47 +123,60 @@ const Dashboard = props => {
 
 // NOT OPTIMAL ROUTING -> RELOADING EVERY TIME ROUTE OCCURS
   const routeToProgress  = () => {
-    window.open("/Dashboard/Progress", "_self");
+    window.open("/Progress", "_self");
     console.log("PROGRESS")
   }
 
   const routeToCourses  = () => {
-    window.open("/Dashboard/Topic", "_self");
+    window.open("/Topic", "_self");
     console.log("COURSES")
+  }
+
+  const routeToHome  = () => {
+    window.open("/", "_self");
+    console.log("HOME")
   }
 
   return (
     <div className={classes.root}>
         <HeaderFrame />
-        <Paper className={classes.profileContainer} elevation={2}>
+        {/* <div className={classes.profileContainer} elevation={0}>
             <Avatar className={classes.avatar} alt="PROFILE" src={monkey}/>
             <div className={classes.profileMenu}>
                 <Typography>John Doe</Typography>
                 <Typography>@johndoe123</Typography>
                 <Button>Edit Profile</Button>
             </div>
-        </Paper>
+        </div> */}
         <div className={classes.body}>
-            <Paper className={classes.leftPanel} elevation={2}>
-                <div className={classes.title}>
-                    <Typography>MENU</Typography>
-                </div>
-                <Button onClick={routeToCourses}>Courses</Button>
-                <Button onClick={routeToProgress}>Progress</Button>
-            </Paper>
-            <Paper className={classes.rightPanel} elevation={2}>
+            <div className={classes.leftPanel} elevation={0}>
+                <Typography className={classes.title}>MENU</Typography>
+                <Button onClick={routeToHome} className={classes.menuItem} disableTouchRipple>
+                    <AppsIcon className={classes.menuIcon}/>
+                    <Typography className={classes.menuText}>Home</Typography>
+                </Button>
+                <Button onClick={routeToCourses} className={classes.menuItem} disableTouchRipple>
+                    <SubjectIcon className={classes.menuIcon}/>
+                    <Typography className={classes.menuText}>Courses</Typography>
+                </Button>
+                <Button onClick={routeToProgress} className={classes.menuItem} disableTouchRipple>
+                    <BarChartIcon className={classes.menuIcon}/>
+                    <Typography className={classes.menuText}>Progress</Typography>
+                </Button>
+            </div>
+            <div className={classes.rightPanel}>
                 <Switch>
-                    <Route path="/Dashboard/Home">
-                        <Home />
-                    </Route>
-                    <Route path="/Dashboard/Progress">
+                    <Route path="/Progress">
                         <Progress />
                     </Route>
-                    <Route path="/Dashboard/Topic">
+                    <Route path="/Topic">
                         <Topic />
                     </Route>
+                    <Route path="/">
+                        <Home />
+                    </Route>
                 </Switch>
-            </Paper>
+            </div>
         </div>
     </div>
   );

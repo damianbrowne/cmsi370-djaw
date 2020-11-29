@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import MenuIcon from '@material-ui/icons/Menu';
+import logo from "../assets/images/logo.png";
 
 import { 
   AppBar, 
@@ -11,6 +12,7 @@ import {
   makeStyles,
   Popover,
   Paper,
+  Avatar,
   
 } from '@material-ui/core'
 
@@ -82,9 +84,10 @@ export default function ButtonAppBar() {
 
     return (
         <div className={classes.root}>
-            <AppBar position="static">
+            <AppBar position="static" elevation={0}>
                 <Toolbar>
-                    <Link to="/Dashboard/Home" className={classes.title}>
+                    <Avatar src={logo} style = {{marginRight: 10, }}/>
+                    <Link to="/" className={classes.title}>
                         Relab
                     </Link>
                     <Button 

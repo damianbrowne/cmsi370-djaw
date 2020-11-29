@@ -46,7 +46,7 @@ export default function App() {
             <Route path="/Login">
               <Login />
             </Route>
-            <Route path="/Dashboard/:id">
+            <Route path="/">
               <Dashboard />
             </Route>
           </Switch>
