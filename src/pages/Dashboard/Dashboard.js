@@ -103,17 +103,14 @@ const Dashboard = props => {
     console.log("COURSES")
   }
 
+  const routeToHome  = () => {
+    window.open("/", "_self");
+    console.log("HOME")
+  }
+
   return (
     <div className={classes.root}>
         <HeaderFrame />
-        <Paper className={classes.profileContainer} elevation={2}>
-            <Avatar className={classes.avatar} alt="PROFILE" src={monkey}/>
-            <div className={classes.profileMenu}>
-                <Typography>John Doe</Typography>
-                <Typography>@johndoe123</Typography>
-                <Button>Edit Profile</Button>
-            </div>
-        </Paper>
         <div className={classes.body}>
             <Paper className={classes.leftPanel} elevation={2}>
                 <Typography>Menu</Typography>

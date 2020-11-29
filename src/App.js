@@ -15,32 +15,12 @@ import Login from './pages/Login/LoginPages/Login.js';
 import Dashboard from './pages/Dashboard/Dashboard.js';
 import Survey from './pages/Survey/Survey.js';
 
-import Home from './pages/Dashboard/DashboardPages/Home.js';
-import Progress from './pages/Dashboard/DashboardPages/Progress.js';
-import Topic from './pages/Dashboard/DashboardPages/Topic.js';
-
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
         <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/Dashboard/Home">Home</Link>
-              </li>
-              <li>
-                <Link to="/SignUp">Signup</Link>
-              </li>
-              <li>
-                <Link to="/Login">Login</Link>
-              </li>
-              <li>
-                <Link to="/Survey">Survey</Link>
-              </li>
-            </ul>
-          </nav>
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
