@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 4,
     justifyContent: 'center'
   },
-  paper: {
+  typography: {
     maxWidth: 800,
     margin: `${theme.spacing(1)}px auto`,
     padding: theme.spacing(2),
@@ -34,25 +34,17 @@ const firstMessages = ["Ideo sumi sae ima ente rari novi?",
 
 export default function Survey() {
   const classes = useStyles();
-  function clickHandler() {
-    console.log('buttom clicked')
-  }
 
   return (
     <div className={classes.root}>
-      <Typography 
-        component="h1"
-        variant="outlined"
-        margin="normal"
-        align="center"
-        padding= "5px">
+      <Typography className={classes.typography}>
         Do not panic. This is a survey.
       </Typography>
       {firstMessages.map((item, index) => (
         <Question1 question = {item} index = {index+1}> </Question1>
       ))}   
       <Box textAlign='center'>
-        <Button variant='contained' color="primary" onClick={clickHandler}>
+        <Button variant='contained' color="primary">
           Submit Survey
         </Button>
       </Box>
