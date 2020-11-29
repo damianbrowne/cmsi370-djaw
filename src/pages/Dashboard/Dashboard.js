@@ -84,13 +84,17 @@ const useStyles = makeStyles((theme) => ({
         minWidth: 750,
     },
 
+    title: {
+        backgroundColor:"blue",
+        fontFamily:"Avenir",
+        paddingTop: 25,
+        paddingBottom: 25
+    },
+
 }),{ name: 'Dashboard' });
 
 const Dashboard = props => {
   const classes = useStyles();
-//   const { page } = props
-//   let { id } = useParams()
-
 
 // NOT OPTIMAL ROUTING -> RELOADING EVERY TIME ROUTE OCCURS
   const routeToProgress  = () => {
@@ -116,7 +120,9 @@ const Dashboard = props => {
         </Paper>
         <div className={classes.body}>
             <Paper className={classes.leftPanel} elevation={2}>
-                <Typography>Menu</Typography>
+                <div className={classes.title}>
+                    <Typography>MENU</Typography>
+                </div>
                 <Button onClick={routeToCourses}>Courses</Button>
                 <Button onClick={routeToProgress}>Progress</Button>
             </Paper>

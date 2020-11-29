@@ -24,7 +24,7 @@ export default function App() {
       <CssBaseline />
       <Router>
         <div>
-          <nav>
+          {/* <nav>
             <ul>
               <li>
                 <Link to="/Dashboard/Home">Home</Link>
@@ -36,7 +36,7 @@ export default function App() {
                 <Link to="/Login">Login</Link>
               </li>
             </ul>
-          </nav>
+          </nav> */}
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
