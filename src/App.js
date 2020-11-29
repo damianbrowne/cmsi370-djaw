@@ -13,6 +13,7 @@ import theme from './assets/theme.js';
 import SignUp from './pages/Login/LoginPages/SignUp.js';
 import Login from './pages/Login/LoginPages/Login.js';
 import Dashboard from './pages/Dashboard/Dashboard.js';
+import Survey from './pages/Survey/Survey.js';
 
 import Home from './pages/Dashboard/DashboardPages/Home.js';
 import Progress from './pages/Dashboard/DashboardPages/Progress.js';
@@ -35,6 +36,9 @@ export default function App() {
               <li>
                 <Link to="/Login">Login</Link>
               </li>
+              <li>
+                <Link to="/Survey">Survey</Link>
+              </li>
             </ul>
           </nav>
           {/* A <Switch> looks through its children <Route>s and
@@ -48,6 +52,9 @@ export default function App() {
             </Route>
             <Route path="/Dashboard/:id">
               <Dashboard />
+            </Route>
+            <Route path="/Survey">
+              <Survey />
             </Route>
           </Switch>
         </div>
