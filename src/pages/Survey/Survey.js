@@ -8,6 +8,7 @@ import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
 import { Avatar } from '@material-ui/core';
 import logo from "../../assets/images/logo.png";
+import { BorderRight } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,7 +48,8 @@ const useStyles = makeStyles((theme) => ({
     color: "white", 
     fontSize: 16, 
     fontWeight:"bold",
-    boxShadow: '0px 0px 1px rgba(0, 0, 0, 0.5)'
+    boxShadow: '0px 0px 1px rgba(0, 0, 0, 0.5)',
+    borderRadius: 0,
   }
 }));
 

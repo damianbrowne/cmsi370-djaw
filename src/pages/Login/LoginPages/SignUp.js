@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import logo from "../../../assets/images/logo.png";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -20,19 +21,27 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: theme.palette.background.main,
-    padding: 30,
-    boxShadow: '0 5px 5px #aaa',
+    paddingTop: 30,
+    paddingBottom: 50,
+    paddingRight: 50, 
+    paddingLeft: 50, 
+    boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.25)'
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    minWidth: 75, 
+    minHeight: 75, 
   },
   form: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
   submit: {
-    margin: theme.spacing(3, 0, 2),
+    margin: theme.spacing(3, 0, 3),
+    color:"white", 
+    fontSize: 18, 
+    boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.0)',
+    borderRadius: 0,
   },
 }));
 
@@ -46,11 +55,9 @@ export default function SignUp() {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-         Sign Up
+        <Avatar className={classes.avatar}  src={logo}/>
+        <Typography component="h1" variant="h5" style={{}}>
+          Sign Up
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
