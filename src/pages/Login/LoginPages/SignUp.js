@@ -56,7 +56,7 @@ export default function SignUp() {
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}  src={logo}/>
-        <Typography component="h1" variant="h5" style={{}}>
+        <Typography component="h1" variant="h5" style={{marginBottom: 20}}>
           Sign Up
         </Typography>
         <form className={classes.form} noValidate>

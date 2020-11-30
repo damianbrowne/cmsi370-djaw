@@ -8,12 +8,13 @@ import {
 
 import Video from './Video.js';
 
-
 import yogaImage from '../../../assets/images/yoga.jpg';
 import stretchImage from '../../../assets/images/stretch.jpg';
 import ballImage from '../../../assets/images/ball.jpeg';
 
-const useStyles = makeStyles((theme) => ({
+
+
+const useStyles = makeStyles(() => ({
     root: {
         display:"flex",
         flexDirection:"column",
@@ -42,13 +43,28 @@ export default function Courses() {
     return (
       <React.Fragment>
         <Grid item xs={4}>
-            <Video title="Yoga Therapy" description="Start this lesson with yoga stretches etc and work your way up!" image={yogaImage}/>
+            <Video 
+                title="Yoga Therapy" 
+                description="Start this lesson with yoga stretches etc and work your way up!" 
+                image={yogaImage}
+                link="https://www.youtube.com/embed/L_xrDAtykMI"
+            />
         </Grid>
         <Grid item xs={4}>
-            <Video title="Ball Catch" description="Learn the fundamentals of hand-eye coordination and master these skills." image={ballImage} />
+            <Video 
+                title="Ball Coordination" 
+                description="Learn the basics of hand-eye coordination and master these skills." 
+                image={ballImage}
+                link="https://www.youtube.com/embed/faVOAI0hKrA"
+            />
         </Grid>
         <Grid item xs={4}>
-            <Video title="Fun Stretches" description="Go through some fun stretches to start the day right." image={stretchImage}/>
+            <Video 
+                title="Fun Stretches" 
+                description="Go through some fun stretches to start the day right." 
+                image={stretchImage}
+                link="https://www.youtube.com/embed/_IoYLhrTBqY"
+            />
         </Grid>
       </React.Fragment>
     );
