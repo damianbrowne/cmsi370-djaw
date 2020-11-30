@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
     color: "white", 
     fontSize: 16, 
     fontWeight:"bold",
-    boxShadow: '0px 0px 1px rgba(0, 0, 0, 0.5)'
+    boxShadow: '0px 0px 1px rgba(0, 0, 0, 0.5)',
+    borderRadius: 0,
   }
 }));
 
