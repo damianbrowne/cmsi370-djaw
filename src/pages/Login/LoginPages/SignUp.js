@@ -110,7 +110,7 @@ export default function SignUp() {
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="Get spammed to heck via email."
+                label="Subscribe to email notifications"
               />
             </Grid>
           </Grid>

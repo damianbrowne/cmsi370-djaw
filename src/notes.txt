@@ -1,0 +1,33 @@
+DAMIAN's NOTES:
+*some things to consider as we iterate
+*some of these can be seen as to-do items
+
+- darken the colors (especially the light blue color) to create more 
+contrast with the white background
+
+- find ways to add more colors in general (to make it more inviting for kids!)
+
+- consider new name (more descriptive, kid-friendly?). maybe:
+    - PT 4 kids
+    - Monkey PT
+    - tagline: Monkey See, Monkey do
+
+- new logo
+    - i personally really like the monkey mascot, so we could do some research
+    and sketching on that
+
+- we should think about how the home page menu and hamburger menu differentiate
+and what we should use each for
+
+- add currency count somewhere (bananas)
+
+- add overall progress to Home page
+
+- maybe we should call the classes page "Exercises" ?
+
+- I thought we were just doing videos for this version and not live classes
+
+- Non-design related: I will talk to my mother asap about survey questions and video ideas.
+    - maybe we want to make a video or two (I could do it) for the website as an example
+
+- ability to view who is logged in in the header
