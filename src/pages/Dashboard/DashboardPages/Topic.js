@@ -1,17 +1,11 @@
 import React from 'react';
 
 import {
-    Container,
-    Avatar,
-    Button,
-    Paper,
-    TextField,
     Grid,
     Typography,
     makeStyles,
 } from '@material-ui/core'
 
-import { useParams } from 'react-router'
 import Video from './Video.js';
 
 
@@ -43,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Courses() {
   const classes = useStyles();
-  let { id } = useParams()
 
   function FormRow() {
     return (

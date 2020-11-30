@@ -12,6 +12,7 @@ import theme from './assets/theme.js';
 import SignUp from './pages/Login/LoginPages/SignUp.js';
 import Login from './pages/Login/LoginPages/Login.js';
 import Dashboard from './pages/Dashboard/Dashboard.js';
+import Survey from './pages/Survey/Survey.js'
 
 export default function App() {
   return (
@@ -27,6 +28,9 @@ export default function App() {
             </Route>
             <Route path="/Login">
               <Login />
+            </Route>
+            <Route path="/Survey">
+              <Survey />
             </Route>
             <Route path="/">
               <Dashboard />

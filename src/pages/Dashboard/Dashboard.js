@@ -27,20 +27,13 @@ const useStyles = makeStyles(() => ({
         display:"flex",
         flexDirection:"column",
         minHeight: '100vh',
-        // padding: 10,
     },
-
-
-
-
-
 
     body: {
         display:"flex",
         flexDirection:"row",
         flex: 2,
         margin: 10,
-
     },
 
     leftPanel: {

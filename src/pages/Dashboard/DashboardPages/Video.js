@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {
-    Button,
     makeStyles,
     Modal,
     Backdrop,
@@ -10,14 +9,11 @@ import {
     Typography,
     Card,
     CardActionArea,
-    CardActions,
     CardContent,
     CardMedia,
 } from '@material-ui/core'
 
-import { useParams } from 'react-router'
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         display:"flex",
         flexDirection:"column",
@@ -76,8 +72,6 @@ const Video = props => {
 
   const [openVideo, setVideoOpen] = React.useState(false);
 
-  let { id } = useParams()
-
   const handleOpen = () => {
     setVideoOpen(true);
   };
@@ -127,9 +121,6 @@ const Video = props => {
                 </Paper>
             </Fade>
         </Modal>
-
-
-
     </div>
   );
 }

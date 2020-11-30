@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-// import Copyright from './Copyright'
+import Copyright from './Copyright'
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: theme.palette.background.main,
-    padding: 30,
+    padding: '15px',
     boxShadow: '0 5px 5px #aaa',
   },
   avatar: {
@@ -37,12 +37,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignUp() {
+export default function Register() {
   const classes = useStyles();
-  const toHomePage  = () => {
-    window.open("/Survey", "_self");
-    console.log("HOME")
-  }
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -51,7 +48,7 @@ export default function SignUp() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-         Sign Up
+          Register
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
@@ -109,14 +106,13 @@ export default function SignUp() {
             </Grid>
           </Grid>
           <Button
-            // type="submit"
+            type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={toHomePage}
           >
-            Sign Up
+            Register
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
@@ -127,9 +123,9 @@ export default function SignUp() {
           </Grid>
         </form>
       </div>
-      {/* <Box mt={4}>
+      <Box mt={4}>
         <Copyright />
-      </Box> */}
+      </Box>
     </Container>
   );
 }
