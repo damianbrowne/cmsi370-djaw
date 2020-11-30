@@ -8,6 +8,7 @@ import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
 import { Avatar } from '@material-ui/core';
 import logo from "../../assets/images/logo.png";
+import { BorderRight } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {

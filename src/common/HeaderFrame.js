@@ -44,6 +44,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 275,
     paddingTop: 15,
     paddingBottom: 15,
+    boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.25)',
+    borderRadius: 0,
   },
 
   popoverMenu: {
@@ -158,7 +160,17 @@ export default function ButtonAppBar() {
                             </Button>
                             <Divider style={{marginTop: 20, marginBottom: 20, }}/>
                             <div className={classes.signOut}>
-                                <Button style={{color:"#FF5B5B"}} onClick={routeToLogIn}>
+                                <Button 
+                                // disableTouchRipple
+                                style={{
+                                  color:"#FF5B5B", 
+                                  backgroundColor: "rgba(255,0,0,0.1)", 
+                                  borderRadius: 0, 
+                                  paddingLeft: 25, 
+                                  paddingRight: 25
+                                }} 
+                                onClick={routeToLogIn}
+                                >
                                     Sign Out
                                 </Button>
                             </div>

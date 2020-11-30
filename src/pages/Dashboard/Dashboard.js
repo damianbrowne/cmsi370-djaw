@@ -116,10 +116,10 @@ const Dashboard = () => {
                     <SubjectIcon className={classes.menuIcon}/>
                     <Typography className={classes.menuText}>Classes</Typography>
                 </Button>
-                <Button onClick={routeToProgress} className={classes.menuItem} disableTouchRipple>
+                {/* <Button onClick={routeToProgress} className={classes.menuItem} disableTouchRipple>
                     <BarChartIcon className={classes.menuIcon}/>
                     <Typography className={classes.menuText}>Progress</Typography>
-                </Button>
+                </Button> */}
             </div>
             <div className={classes.rightPanel}>
                 <Switch>
