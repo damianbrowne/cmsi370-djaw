@@ -48,6 +48,7 @@ export default function Courses() {
                 description="Start this lesson with yoga stretches etc and work your way up!" 
                 image={yogaImage}
                 link="https://www.youtube.com/embed/L_xrDAtykMI"
+                percent={35}
             />
         </Grid>
         <Grid item xs={4}>
@@ -56,6 +57,7 @@ export default function Courses() {
                 description="Learn the basics of hand-eye coordination and master these skills." 
                 image={ballImage}
                 link="https://www.youtube.com/embed/faVOAI0hKrA"
+                percent={76}
             />
         </Grid>
         <Grid item xs={4}>
@@ -64,6 +66,7 @@ export default function Courses() {
                 description="Go through some fun stretches to start the day right." 
                 image={stretchImage}
                 link="https://www.youtube.com/embed/_IoYLhrTBqY"
+                percent={0}
             />
         </Grid>
       </React.Fragment>

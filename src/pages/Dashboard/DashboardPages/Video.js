@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {
     makeStyles,
@@ -11,6 +11,7 @@ import {
     CardActionArea,
     CardContent,
     CardMedia,
+    Button
 } from '@material-ui/core'
 
 import Iframe from 'react-iframe'
@@ -37,9 +38,9 @@ const useStyles = makeStyles(() => ({
         maxWidth: 400,
         minHeight: 300,
         maxHeight: 400,
-        marginBottom: 10,
+        marginBottom: 16,
         boxShadow: '0px 0px 40px rgba(0, 0, 0, 0.2)',
-        borderRadius: 10,
+        borderRadius: 0,
     },
 
     modalPaper: {
@@ -103,30 +104,30 @@ const useStyles = makeStyles(() => ({
     progress: {
         width: "100%",
         borderRadius: 0,
-        // boxShadow: '0px 0px 40px rgba(0, 0, 0, 0.2)',
-        minHeight: 50, 
-        maxHeight: 50, 
+        boxShadow: '0px 0px 40px rgba(0, 0, 0, 0.2)',
+        minHeight: 75, 
+        maxHeight: 75, 
         display:"flex",
         justifyContent:'center',
         alignItems:'center',
-        borderRadius: 10,
-        backgroundColor:'transparent'
+        borderRadius: 0,
+        backgroundColor:"white",
     },
 
     progressBar: {
-        backgroundColor: '#d8d8d8',
-        borderRadius: 10,
+        backgroundColor: '#dadada',
+        borderRadius: 20,
         position: 'relative',
-        margin: '15px 0',
-        height: '30px',
-        width: '100%',
-        fontWeight:"bold"
+        height: 8,
+        width: "65%",
+        fontWeight:"bold",
+        display:"flex",
     },
 
     progressBarDone: {
-        background: 'linear-gradient(to left, #54C981, #5EB1FF)',
-        boxShadow: '0 0 1px 0 #54C981, 0 0 1px 0 #5EB1FF',
-        borderRadius: 10,
+        background: 'linear-gradient(to left, #54C981, #54C981)',
+        boxShadow: '0 0 2px 0 #54C981, 0 0 2px 0 #54C981',
+        borderRadius: 20,
         color: '#fff',
         display: 'flex',
         alignItems: 'center',
@@ -135,6 +136,29 @@ const useStyles = makeStyles(() => ({
         width: 0,
         opacity: 0,
         transition:'1s ease 0.3s',
+    },
+
+    percent: {
+        display:"flex", 
+        alignSelf:"center", 
+        justifySelf:"flex-end", 
+        marginLeft: 25, 
+        marginRight: 0,
+        fontFamily:"Avenir",
+        fontWeight:"bold",
+    },
+
+    start: {
+        display:"flex", 
+        textAlign:"center", 
+        justifyContent:"center", 
+        fontFamily:"Arial",
+        fontWeight:"bold",
+        fontSize: 24,
+        width: "100%",
+        textTransform:"none",
+        color:"#54C981",
+
     }
 
 }),{ name: 'Video' });
@@ -150,10 +174,12 @@ const Video = props => {
 
   const handleClose = () => {
     setVideoOpen(false);
+    window.location.reload();
   };
 
+
   const ProgressBar = ({done}) => {
-	const [style, setStyle] = React.useState({});
+    const [style, setStyle] = React.useState({});
     const classes = useStyles(props);
     
 	setTimeout(() => {
@@ -163,14 +189,12 @@ const Video = props => {
 		}
 		
 		setStyle(newStyle);
-	}, 200);
+	}, 1);
 	
 	return (
-		<div className={classes.progressBar}>
-			<div className={classes.progressBarDone} style={style}>
-				{done}%
-			</div>
-		</div>
+        <div className={classes.progressBar}>
+            <div className={classes.progressBarDone} style={style}></div>
+        </div>
 	)
   }
 
@@ -196,9 +220,17 @@ const Video = props => {
                     </CardContent>
                 </CardActionArea>
             </Card>
-            <div className={classes.progress} elevation={0}>
-                <ProgressBar done={Math.floor(Math.random() * Math.floor(100))}/>
-            </div>
+                {
+                    props.percent > 0 ?
+                    <div className={classes.progress} elevation={0}>
+                        <ProgressBar done={props.percent}/>
+                        <Typography className={classes.percent}>{props.percent}%</Typography>
+                    </div>
+                    :
+                    <Button className={classes.progress} elevation={0} disableTouchRipple onClick={handleOpen}>
+                        <Typography className={classes.start}>Start Class</Typography>
+                    </Button>
+                }
         </div>
 
 
