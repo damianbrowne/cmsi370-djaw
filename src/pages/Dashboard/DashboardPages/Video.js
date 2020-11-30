@@ -21,12 +21,11 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display:"flex",
         flexDirection:"column",
-        marginBottom: 50,
+        marginBottom: 60,
         marginRight: 50,
         alignItems:"center",
         borderRadius: 0,
         boxShadow: '0px 0px 40px rgba(0, 0, 0, 0.2)'
-        
     },
 
     modalPaper: {

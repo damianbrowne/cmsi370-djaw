@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
         flexDirection:"column",
         paddingLeft: 40,
         width: "100%",
-        // backgroundColor:"red"
     },
 
     title: {
@@ -38,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
 
     videoContainer: {
         display:"flex",
-        // backgroundColor:"blue"
     }
 
 }),{ name: 'Courses' });
