@@ -6,13 +6,48 @@ import Question2 from './Question/Question2';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
+import { Avatar } from '@material-ui/core';
+import logo from "../../assets/images/logo.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     overflow: 'hidden',
     padding: 4,
-    justifyContent: 'center'
+  },
+
+  surveyContainer:{
+    display:"flex",
+    alignSelf:"center",
+    flexDirection:"column",
+    paddingTop: 50,
+    paddingBottom: 50,
+  },
+
+  submitContainer: {
+    paddingTop: 30, 
+    paddingBottom: 30,
+  },
+
+  title: {
+    paddingTop: 25,
+    paddingBottom: 50, 
+    fontSize: 32, 
+    fontWeight:"bold",
+    display:"flex", 
+    justifyContent:"center", 
+    flexDirection:"column"
+  },
+
+  button: {
+    paddingLeft: 25, 
+    paddingRight: 25, 
+    paddingTop: 12, 
+    paddingBottom: 12,  
+    color: "white", 
+    fontSize: 16, 
+    fontWeight:"bold",
+    boxShadow: '0px 0px 1px rgba(0, 0, 0, 0.5)'
   }
 }));
 
@@ -33,27 +68,31 @@ export default function Survey() {
   
   return (
     <div className={classes.root}>
-      <Typography 
-        component="h1" 
-        variant="outlined"
-        margin="normal"
-        align="center"
-        padding= "5px"
-      >
-        Do not panic. This is a survey.
-      </Typography>
-      {firstMessages.map((item, index) => (
-        <Question1 question = {item} index = {index+1}> </Question1>
-      ))}   
-      <Box textAlign='center'>
-        <Button 
-          variant='contained' 
-          color="primary" 
-          href="/"
+      <div className={classes.surveyContainer}>
+        <Typography 
+          component="h1" 
+          align="center"
+          className={classes.title}
         >
-          Submit Survey
-        </Button>
-      </Box>
+          <Avatar src={logo} style = {{marginRight: 10, display:"flex", alignSelf:"center",marginBottom: 25, minWidth: 100, minHeight: 100,}}/>
+          Do not panic. This is a survey.
+        </Typography>
+        {firstMessages.map((item, index) => (
+          <Question1 question = {item} index = {index+1}> </Question1>
+        ))}   
+        <Box textAlign='center' className={classes.submitContainer}>
+          <Button 
+            variant='contained' 
+            color="primary" 
+            href="/"
+            className={classes.button}
+            elevation={0}
+          >
+            Submit Survey
+          </Button>
+        </Box>
+      </div>
+
     </div>
   );
 }
