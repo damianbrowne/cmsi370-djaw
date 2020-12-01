@@ -59,7 +59,8 @@ const useStyles = makeStyles(() => ({
 
     username: {
         fontSize: 16, 
-        fontFamily:"Avenir",
+        // Avenir
+        fontFamily:"Roboto",
         color:"#CFCFCF"
     }
 

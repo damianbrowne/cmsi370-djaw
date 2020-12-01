@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: 40,
         paddingRight: 40,
         width: "100%",
+        // borderRadius: 25,
+        backgroundColor: theme.palette.offwhite,
+        
     },
 
     profileContainer: {
@@ -32,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
         display:"flex",
         alignItems:"center",
         flexDirection:"row",
-        backgroundColor:"white",
+        borderRadius: 15,
+        backgroundColor:theme.palette.white,
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)'
     },
 
@@ -56,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight:"bold",
         fontSize: 28,
         // Arial
-        fontFamily:"Roboto",
+        fontFamily: theme.font.primary,
         paddingBottom: 25,
         paddingTop: 50,
     },
@@ -65,14 +69,14 @@ const useStyles = makeStyles((theme) => ({
         fontWeight:"bold",
         fontSize: 22, 
         // Avenir
-        fontFamily:"Roboto",
+        fontFamily: theme.font.primary,
         // color:"#414141"
     },
 
     username: {
         fontSize: 16, 
         // Avenir
-        fontFamily:"Roboto",
+        fontFamily: theme.font.primary,
         color:"#CFCFCF"
     }
 

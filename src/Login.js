@@ -15,6 +15,9 @@ import Container from '@material-ui/core/Container';
 import Copyright from './Copyright'
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: theme.palette.secondary.main,
+  },
   paper: {
     marginTop: theme.spacing(8),
     display: 'flex',

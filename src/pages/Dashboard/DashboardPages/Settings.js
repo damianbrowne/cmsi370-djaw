@@ -44,20 +44,23 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontWeight:"bold",
         fontSize: 28,
-        fontFamily:"Arial",
+        // Arial
+        fontFamily:"Roboto",
         paddingBottom: 25,
         paddingTop: 50,
     },
 
     name: {
         fontWeight:"bold",
-        fontSize: 22, 
-        fontFamily:"Avenir",
+        fontSize: 22,
+        // Avenir
+        fontFamily:"Roboto",
     },
 
     username: {
         fontSize: 16, 
-        fontFamily:"Avenir",
+        // Avenir
+        fontFamily:"Roboto",
         color:"#CFCFCF"
     }
 
