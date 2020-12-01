@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: theme.palette.white.main,
-    paddingTop: 30,
+    paddingTop: 20,
     paddingBottom: 35,
     paddingRight: 50, 
     paddingLeft: 50, 
@@ -65,18 +65,18 @@ export default function Login() {
         <CssBaseline />
         <div className={classes.paper}>
           <Avatar className={classes.avatar} src={logo} />
-          <Typography component="h1" variant="h5">
+          {/* <Typography component="h1" variant="h5">
             Login
-        </Typography>
+        </Typography> */}
           <form className={classes.form} noValidate>
             <TextField
               variant="outlined"
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
+              id="email" // maybe change for backend
+              label="Email or Username"
+              name="email" // maybe change for backend
               autoComplete="email"
               autoFocus
             />
@@ -103,7 +103,7 @@ export default function Login() {
               className={classes.submit}
               onClick={toHomePage}
             >
-              Login
+              Log In
           </Button>
             <Grid container>
               <Grid item xs>
@@ -113,7 +113,7 @@ export default function Login() {
               </Grid>
               <Grid item>
                 <Link href="./SignUp" variant="body2">
-                  {"Register"}
+                  {"Create an account"}
                 </Link>
               </Grid>
             </Grid>

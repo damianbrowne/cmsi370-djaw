@@ -103,7 +103,7 @@ export default function Survey() {
           <Avatar src={logo} style = {{marginRight: 10, display:"flex", alignSelf:"center",marginBottom: 25, minWidth: 100, minHeight: 100,}}/>
         </Typography>
         <Typography align="center" className={classes.header}>Don't panic!</Typography>
-        <Typography align="center" className={classes.subheader}>Answer these questions so that we can tailor your experience to your needs.
+        <Typography align="center" className={classes.subheader}>Answer these questions so that we can tailor your experience to your needs
         </Typography>
         {firstMessages.map((item, index) => (
           <Question1 question = {item} index = {index+1}> </Question1>

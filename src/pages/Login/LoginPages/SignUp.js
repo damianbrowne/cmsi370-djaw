@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: theme.palette.white,
-    paddingTop: 30,
+    paddingTop: 20,
     paddingBottom: 35,
     paddingRight: 50, 
     paddingLeft: 50, 
@@ -67,11 +67,23 @@ export default function SignUp() {
         <CssBaseline />
         <div className={classes.paper}>
           <Avatar className={classes.avatar} src={logo} />
-          <Typography component="h1" variant="h5" style={{ marginBottom: 20 }}>
+          {/* <Typography component="h1" variant="h5" style={{ marginBottom: 20 }}>
             Sign Up
-        </Typography>
+        </Typography> */}
           <form className={classes.form} noValidate>
             <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  label="Username"
+                  name="userName"
+                  id="userName"
+                  variant="outlined"
+                  required
+                  fullWidth
+                  autoComplete="username"
+                  autoFocus
+                />
+              </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
                   label="First Name"
@@ -81,7 +93,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   autoComplete="fname"
-                  autoFocus
+                  //autoFocus
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -121,7 +133,7 @@ export default function SignUp() {
               <Grid item xs={12}>
                 <FormControlLabel
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="Subscribe to email notifications"
+                  label="Subscribe to receive email notifications"
                 />
               </Grid>
             </Grid>
