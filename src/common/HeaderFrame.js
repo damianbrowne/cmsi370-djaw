@@ -33,10 +33,10 @@ const useStyles = makeStyles((theme) => ({
 
   title: {
     flexGrow: 1,
-    color:"white",
+    color:'#ffdf4f',
     fontWeight:"bold",
     textDecoration:"none",
-    fontSize: 18,
+    fontSize: 25,
   },
 
   popoverPaper: {
@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 275,
     paddingTop: 15,
     paddingBottom: 15,
+    // backgroundColor: '#ffdf4f',
     boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.25)',
     borderRadius: 0,
   },
@@ -51,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
   popoverMenu: {
     flex: 1, 
     display:"flex",
+    // backgroundColor: '#ffdf4f',
     flexDirection:"column",
   },
 
@@ -74,17 +76,18 @@ const useStyles = makeStyles((theme) => ({
   menuText: {
     textTransform:"none", 
     color: "#292F36", 
-    fontFamily:"Avenir",
+    fontFamily:"Roboto",
     fontSize: 18,
   },
 
   popoverTitle:{
-    fontSize: 22, 
-    fontFamily:"Arial",
+    fontSize: 20, 
+    fontFamily:"Roboto",
+    fontWeight:"Bold",
     alignSelf:"center",
-    color: "#CFCFCF",
-    paddingTop: 18, 
-    paddingBottom: 18, 
+    color: "#000000",
+    paddingTop: 8, 
+    paddingBottom: 8, 
   },
 
   signOut:{
@@ -94,6 +97,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 0, 
     marginBottom: 5,
   },
+
+  profileName:{
+    display: "flex",
+    alignSelf: "right",
+    color: "#000000",
+  }
+
 }));
 
 export default function ButtonAppBar() {
@@ -129,6 +139,7 @@ export default function ButtonAppBar() {
                     <Link to="/" className={classes.title}>
                         Relab
                     </Link>
+                    {/* <Typography className={classes.profileName}>John Doe</Typography> */}
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={handleAvatarClick}>
                         <MenuIcon size="large"/>
                     </IconButton>
@@ -149,25 +160,27 @@ export default function ButtonAppBar() {
                         }}
                     >
                         <div className={classes.popoverMenu}>
-                            <Typography className={classes.popoverTitle}>My Account</Typography>
-                            <Button onClick={routeToSettings} className={classes.menuItem} disableTouchRipple>
-                                <SettingsIcon className={classes.menuIcon}/>
-                                <Typography className={classes.menuText}>Settings</Typography>
-                            </Button>
+                            <Typography className={classes.popoverTitle}>John Doe</Typography>
                             <Button onClick={routeToCustomize} className={classes.menuItem} disableTouchRipple>
                                 <TuneIcon className={classes.menuIcon}/>
                                 <Typography className={classes.menuText}>Customize Avatar</Typography>
+                            </Button>
+                            <Button onClick={routeToSettings} className={classes.menuItem} disableTouchRipple>
+                              <SettingsIcon className={classes.menuIcon} />
+                              <Typography className={classes.menuText}>Settings</Typography>
                             </Button>
                             <Divider style={{marginTop: 20, marginBottom: 20, }}/>
                             <div className={classes.signOut}>
                                 <Button 
                                 // disableTouchRipple
                                 style={{
-                                  color:"#FF5B5B", 
-                                  backgroundColor: "rgba(255,0,0,0.1)", 
+                                  color: "#FFFFFF",
+                                  // color:"#FF5B5B", 
+                                  // backgroundColor: "rgba(255,0,0,0.1)", 
+                                  backgroundColor: "#FF5B5B",
                                   borderRadius: 0, 
-                                  paddingLeft: 25, 
-                                  paddingRight: 25
+                                  paddingLeft: 30, 
+                                  paddingRight: 30
                                 }} 
                                 onClick={routeToLogIn}
                                 >

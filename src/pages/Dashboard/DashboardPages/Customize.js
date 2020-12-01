@@ -45,7 +45,8 @@ const useStyles = makeStyles(() => ({
     title: {
         fontWeight:"bold",
         fontSize: 28,
-        fontFamily:"Arial",
+        // Avenir
+        fontFamily:"Roboto",
         paddingBottom: 25,
         paddingTop: 50,
     },
@@ -53,7 +54,8 @@ const useStyles = makeStyles(() => ({
     name: {
         fontWeight:"bold",
         fontSize: 22, 
-        fontFamily:"Avenir",
+        // Avenir
+        fontFamily:"Roboto",
     },
 
     username: {
