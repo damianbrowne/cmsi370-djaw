@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     overflow: 'hidden',
     padding: 4,
+    backgroundColor: theme.palette.offwhite,
   },
 
   surveyContainer:{
@@ -31,13 +32,35 @@ const useStyles = makeStyles((theme) => ({
   },
 
   title: {
-    paddingTop: 25,
-    paddingBottom: 50, 
+    paddingTop: 15,
+    paddingBottom: 0, 
     fontSize: 32, 
+    fontFamily: theme.font.primary,
     fontWeight:"bold",
     display:"flex", 
     justifyContent:"center", 
     flexDirection:"column"
+  },
+
+  header: {
+    paddingTop: 5,
+    fontSize: 28,
+    fontFamily: theme.font.primary,
+    fontWeight: "bold",
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column"
+  },
+
+  subheader: {
+    paddingTop: 5,
+    paddingBottom: 15,
+    fontFamily: theme.font.primary,
+    fontSize: 20,
+    fontWeight: "regular",
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column"
   },
 
   button: {
@@ -77,7 +100,9 @@ export default function Survey() {
           className={classes.title}
         >
           <Avatar src={logo} style = {{marginRight: 10, display:"flex", alignSelf:"center",marginBottom: 25, minWidth: 100, minHeight: 100,}}/>
-          Do not panic. This is a survey.
+        </Typography>
+        <Typography align="center" className={classes.header}>Don't panic!</Typography>
+        <Typography align="center" className={classes.subheader}>Answer these questions so that we can tailor your experience to your needs.
         </Typography>
         {firstMessages.map((item, index) => (
           <Question1 question = {item} index = {index+1}> </Question1>

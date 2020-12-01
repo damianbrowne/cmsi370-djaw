@@ -24,11 +24,12 @@ import SubjectIcon from '@material-ui/icons/Subject';
 import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
 import BarChartIcon from '@material-ui/icons/BarChart';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         display:"flex",
         flexDirection:"column",
         minHeight: '100vh',
+        backgroundColor: theme.palette.offwhite,
     },
 
     body: {
@@ -44,7 +45,9 @@ const useStyles = makeStyles(() => ({
         flex: .2,
         marginRight: 10,
         minWidth: 250,
-        backgroundColor:"white",
+        backgroundColor:theme.palette.white,
+        borderRadius: 15,
+        boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)'
     },
 
     rightPanel: {
@@ -54,9 +57,11 @@ const useStyles = makeStyles(() => ({
     },
 
     title: {
-        color: "#CFCFCF",
+        color: theme.palette.black,
         // Arial
-        fontFamily:"Roboto",
+        fontFamily: theme.font.primary,
+        justifyContent:"center",
+        fontWeight: 'bold',
         paddingTop: 32,
         paddingBottom: 18,
         paddingLeft: 27,
@@ -65,6 +70,7 @@ const useStyles = makeStyles(() => ({
     
     menuItem: {
         justifyContent:"left",
+        backgroundColor: theme.palette.white,
         paddingTop: 22,
         paddingBottom: 22,
         paddingLeft: 27,
@@ -78,10 +84,10 @@ const useStyles = makeStyles(() => ({
 
     menuText: {
         textTransform:"none", 
-        color: "#292F36", 
+        color: theme.palette.black, 
         fontWeight:"bold",
         // Avenir
-        fontFamily:"Roboto",
+        fontFamily: theme.font.primary,
         fontSize: 18,
     }
 

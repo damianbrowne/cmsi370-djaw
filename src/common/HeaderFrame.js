@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
   title: {
     flexGrow: 1,
-    color:'#ffdf4f',
+    color: theme.palette.secondary.main,
     fontWeight:"bold",
     textDecoration:"none",
     fontSize: 25,
@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
 
   menuText: {
     textTransform:"none", 
-    color: "#292F36", 
+    color: "#292F36",
     fontFamily:"Roboto",
     fontSize: 18,
   },
