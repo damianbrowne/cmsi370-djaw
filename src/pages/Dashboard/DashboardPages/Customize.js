@@ -6,7 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import monkey from '../../../assets/images/monkey.jpg'
 import swoleMonkey from '../../../assets/images/buff_monkey.jpg'
 import fancyMonkey from '../../../assets/images/fancy_monkey.jfif'
-import meanMonkey from '../../../assets/images/mean_monkey.jfif'
+import cuteMonkey from '../../../assets/images/cute_monkey.jfif'
 
 
 
@@ -84,7 +84,20 @@ const useStyles = makeStyles(() => ({
     paper: {
         padding: 10,
         textAlign: 'center',
-    }
+    },
+
+    button: {
+        paddingLeft: 25, 
+        paddingRight: 25, 
+        paddingTop: 12, 
+        paddingBottom: 12,
+        backgroundColor: "white",  
+        color: "black",
+        fontSize: 16, 
+        fontWeight:"bold",
+        boxShadow: '0px 0px 1px rgba(0, 0, 0, 0.5)',
+        borderRadius: 5,
+      }
 
 }),{ name: 'Customize' });
 
@@ -98,23 +111,23 @@ export default function Customize() {
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={3}>
-                    <Button variant="outlined" onClick={() => setLink(monkey)} fullWidth>
+                    <Button className={classes.button} onClick={() => setLink(monkey)} fullWidth>
                         Defualt Monkey
                     </Button>
                 </Grid>
                 <Grid item xs={3}>
-                    <Button variant="outlined" onClick={() => setLink(fancyMonkey)} fullWidth>
+                    <Button className={classes.button} onClick={() => setLink(fancyMonkey)} fullWidth>
                         Fancy Monkey
                     </Button>
                 </Grid>
                 <Grid item xs={3}>
-                    <Button variant="outlined" onClick={() => setLink(swoleMonkey)} fullWidth>
+                    <Button className={classes.button} onClick={() => setLink(swoleMonkey)} fullWidth>
                         Swole Monkey
                     </Button>
                 </Grid>
                 <Grid item xs={3}>
-                    <Button variant="outlined" onClick={() => setLink(meanMonkey)} fullWidth>
-                        Mean Monkey
+                    <Button className={classes.button} onClick={() => setLink(cuteMonkey)} fullWidth>
+                        Cute Monkey
                     </Button>
                 </Grid>
                 <Grid item xs={12}>
