@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
         display:"flex",
         alignItems:"center",
         flexDirection:"row",
-        borderRadius: 5,
+        borderRadius: 0,
         backgroundColor:theme.palette.white.main,
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)'
     },

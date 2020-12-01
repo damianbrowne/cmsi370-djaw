@@ -126,16 +126,16 @@ export default function Customize() {
             <Typography className={classes.title}> Customize My Monkey</Typography>
             <div className={classes.container}>
                 <div className={classes.buttons}>
-                    <Button className={classes.button} onClick={() => setLink(monkey)} fullWidth elevation={0}>
+                    <Button className={classes.button} onClick={() => setLink(monkey)} fullWidth elevation={0} disableTouchRipple>
                         Defualt Monkey
                     </Button>
-                    <Button className={classes.button} onClick={() => setLink(fancyMonkey)} fullWidth>
+                    <Button className={classes.button} onClick={() => setLink(fancyMonkey)} fullWidth disableTouchRipple>
                         Fancy Monkey
                     </Button>
-                    <Button className={classes.button} onClick={() => setLink(swoleMonkey)} fullWidth>
+                    <Button className={classes.button} onClick={() => setLink(swoleMonkey)} fullWidth disableTouchRipple>
                         Swole Monkey
                     </Button>
-                    <Button className={classes.button} onClick={() => setLink(cuteMonkey)} fullWidth>
+                    <Button className={classes.button} onClick={() => setLink(cuteMonkey)} fullWidth disableTouchRipple>
                         Cute Monkey
                     </Button>
                 </div>

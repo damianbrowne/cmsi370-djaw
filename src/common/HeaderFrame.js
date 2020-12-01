@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 15,
     // backgroundColor: '#ffdf4f',
     boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.25)',
-    borderRadius: 5,
+    borderRadius: 0,
   },
 
   popoverMenu: {
@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
     display:"flex",
     justifyContent:"center", 
     alignItems:"center",
-    borderRadius: 15,
+    borderRadius: 0,
     marginBottom: 4,
   },
 
@@ -173,13 +173,11 @@ export default function ButtonAppBar() {
                             <Divider style={{marginTop: 20, marginBottom: 20, }}/>
                             <div className={classes.signOut}>
                                 <Button
-                                // disableTouchRipple
+                                disableTouchRipple
                                 style={{
                                   color: "#FFFFFF",
-                                  // color:"#FF5B5B", 
-                                  // backgroundColor: "rgba(255,0,0,0.1)", 
                                   backgroundColor: '#FF5B5B',
-                                  borderRadius: 5, 
+                                  borderRadius: 30, 
                                   paddingLeft: 30, 
                                   paddingRight: 30
                                 }} 

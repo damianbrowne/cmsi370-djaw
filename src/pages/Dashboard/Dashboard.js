@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 10,
         minWidth: 250,
         backgroundColor:theme.palette.white.main,
-        borderRadius: 5,
+        borderRadius: 0,
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)'
     },
 

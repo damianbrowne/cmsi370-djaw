@@ -57,79 +57,84 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: 50,
     },
 
-    name: {
-        fontWeight:"bold",
-        fontSize: 22,
-        // Avenir
+    label: {
+        fontSize: 18,
         fontFamily:"Roboto",
+        marginBottom: 8,
     },
 
-    username: {
-        fontSize: 16, 
-        // Avenir
-        fontFamily:"Roboto",
-        color:"#CFCFCF"
+    input: {
+        marginBottom: 25,
+        marginRight: 25
+    },
+    row: {
+        display:"flex",
+    },
+
+    submit: {
+        marginTop: 25,
+        width: 200,
     }
 
 }),{ name: 'Settings' });
 
 export default function Settings() {
   const classes = useStyles();
-
+  const routeToHome  = () => {
+    window.open("/", "_self");
+    console.log("HOME")
+  }
   return (
     <div className={classes.root}>
         <Typography className={classes.title}>Account Settings</Typography>
         <form className={classes.form} noValidate>
-            <Typography className={classes.name}>John Doe</Typography>
-            <TextField
-                variant="outlined"
-                margin="normal"
-                fullWidth
-                name="name"
-                label="Name"
-                id="name"
-                autoComplete="name"
-            />
-            <Typography className={classes.name}>johndoe123</Typography>
-            <TextField
-                variant="outlined"
-                margin="normal"
-                fullWidth
-                name="username"
-                label="Username"
-                id="username"
-                autoComplete="username"
-            />
-            <Typography className={classes.name}>johndoe123@gmail.com</Typography>
-            <TextField
-                variant="outlined"
-                margin="normal"
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-            />
-            <Typography className={classes.name}>John Doe</Typography>
-            <TextField
-                variant="outlined"
-                margin="normal"
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-            />
-            <Button
-                type="submit"
-                variant="contained"
-                color="primary"
-                className={classes.submit}
-            >
-                Save Changes
-            </Button>
+            <div className={classes.row}>
+                <div>
+                    <Typography className={classes.label}>Name</Typography>
+                    <TextField
+                        variant="outlined"
+                        label="John Doe"
+                        className={classes.input}
+                    />
+                </div>
+                <div>
+                    <Typography className={classes.label}>Username</Typography>
+                    <TextField
+                        variant="outlined"
+                        label="johndoe123"
+                        className={classes.input}
+                        style={{width: 225,}}
+                    />
+                </div>
+            </div>
+            <div className={classes.row}>
+                <div>
+                    <Typography className={classes.label}>Email Address</Typography>
+                    <TextField
+                        variant="outlined"
+                        label="johndoe123@gmail.com"
+                        className={classes.input}
+                        style={{width: 225,}}
+                    />
+                </div>
+                <div>
+                    <Typography className={classes.label}>Password</Typography>
+                    <TextField
+                        variant="outlined"
+                        label="*********"
+                        className={classes.input}
+                    />
+                </div>
+            </div>
         </form>
+        <Button
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+            onClick={routeToHome}
+        >
+            Save Changes
+        </Button>
     </div>
   );
 }
