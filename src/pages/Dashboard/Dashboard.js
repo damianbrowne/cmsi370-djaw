@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         display:"flex",
         flexDirection:"column",
         minHeight: '100vh',
-        backgroundColor: theme.palette.offwhite,
+        backgroundColor: theme.palette.offwhite.main,
     },
 
     body: {
@@ -45,8 +45,8 @@ const useStyles = makeStyles((theme) => ({
         flex: .2,
         marginRight: 10,
         minWidth: 250,
-        backgroundColor:theme.palette.white,
-        borderRadius: 15,
+        backgroundColor:theme.palette.white.main,
+        borderRadius: 5,
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)'
     },
 
@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     title: {
-        color: theme.palette.black,
+        color: theme.palette.black.main,
         // Arial
         fontFamily: theme.font.primary,
         justifyContent:"center",
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     
     menuItem: {
         justifyContent:"left",
-        backgroundColor: theme.palette.white,
+        backgroundColor: theme.palette.white.main,
         paddingTop: 22,
         paddingBottom: 22,
         paddingLeft: 27,
@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
 
     menuText: {
         textTransform:"none", 
-        color: theme.palette.black, 
+        color: theme.palette.black.main,
         fontWeight:"bold",
         // Avenir
         fontFamily: theme.font.primary,

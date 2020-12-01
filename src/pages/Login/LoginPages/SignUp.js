@@ -34,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 35,
     paddingRight: 50, 
     paddingLeft: 50, 
-    boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.25)'
+    boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.25)',
+    borderRadius: 5,
   },
   avatar: {
     margin: theme.spacing(1),
@@ -50,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     color:"white", 
     fontSize: 18, 
     boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.0)',
-    borderRadius: 0,
+    borderRadius: 5,
   },
 }));
 

@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         paddingRight: 40,
         width: "100%",
         // borderRadius: 25,
-        backgroundColor: theme.palette.offwhite,
+        backgroundColor: theme.palette.offwhite.main,
         
     },
 
@@ -35,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
         display:"flex",
         alignItems:"center",
         flexDirection:"row",
-        borderRadius: 15,
-        backgroundColor:theme.palette.white,
+        borderRadius: 5,
+        backgroundColor:theme.palette.white.main,
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)'
     },
 

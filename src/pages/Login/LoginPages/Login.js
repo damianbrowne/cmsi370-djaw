@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     padding: 20,
     minHeight: '100vh',
-    backgroundColor: theme.palette.offwhite,
+    backgroundColor: theme.palette.offwhite.main,
   },
 
   paper: {
@@ -27,12 +27,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: theme.palette.white,
+    backgroundColor: theme.palette.white.main,
     paddingTop: 30,
     paddingBottom: 35,
     paddingRight: 50, 
     paddingLeft: 50, 
-    boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.25)'
+    boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.25)',
+    borderRadius: 5,
   },
   avatar: {
     margin: theme.spacing(1),
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     color:"white", 
     fontSize: 18, 
     boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.0)',
-    borderRadius: 0,
+    borderRadius: 5,
   },
 }));
 

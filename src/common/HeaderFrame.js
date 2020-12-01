@@ -25,6 +25,7 @@ import TuneIcon from '@material-ui/icons/Tune';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    backgroundColor: theme.palette.primary.main,
   },
 
   menuButton: {
@@ -46,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 15,
     // backgroundColor: '#ffdf4f',
     boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.25)',
-    borderRadius: 0,
+    borderRadius: 5,
   },
 
   popoverMenu: {
@@ -70,22 +71,22 @@ const useStyles = makeStyles((theme) => ({
 
   menuIcon: {
     marginRight: 30, 
-    color:"#000000"
+    color:theme.palette.black.main
   }, 
 
   menuText: {
     textTransform:"none", 
     color: "#292F36",
-    fontFamily:"Roboto",
+    fontFamily:theme.font.primary.main,
     fontSize: 18,
   },
 
   popoverTitle:{
     fontSize: 20, 
-    fontFamily:"Roboto",
+    fontFamily: theme.font.primary.main,
     fontWeight:"Bold",
     alignSelf:"center",
-    color: "#000000",
+    color: theme.palette.black.main,
     paddingTop: 8, 
     paddingBottom: 8, 
   },
@@ -94,14 +95,14 @@ const useStyles = makeStyles((theme) => ({
     display:"flex",
     justifyContent:"center", 
     alignItems:"center",
-    marginTop: 0, 
-    marginBottom: 5,
+    borderRadius: 15,
+    marginBottom: 4,
   },
 
   profileName:{
     display: "flex",
     alignSelf: "right",
-    color: "#000000",
+    color: theme.palette.black.main,
   }
 
 }));
@@ -171,14 +172,14 @@ export default function ButtonAppBar() {
                             </Button>
                             <Divider style={{marginTop: 20, marginBottom: 20, }}/>
                             <div className={classes.signOut}>
-                                <Button 
+                                <Button
                                 // disableTouchRipple
                                 style={{
                                   color: "#FFFFFF",
                                   // color:"#FF5B5B", 
                                   // backgroundColor: "rgba(255,0,0,0.1)", 
-                                  backgroundColor: "#FF5B5B",
-                                  borderRadius: 0, 
+                                  backgroundColor: '#FF5B5B',
+                                  borderRadius: 5, 
                                   paddingLeft: 30, 
                                   paddingRight: 30
                                 }} 

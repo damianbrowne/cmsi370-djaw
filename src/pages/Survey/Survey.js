@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     overflow: 'hidden',
     padding: 4,
-    backgroundColor: theme.palette.offwhite,
+    backgroundColor: theme.palette.offwhite.main,
   },
 
   surveyContainer:{
@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   submitContainer: {
+    borderRadius: 5,
     paddingTop: 30, 
     paddingBottom: 30,
   },
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 15,
     paddingBottom: 0, 
     fontSize: 32, 
-    fontFamily: theme.font.primary,
+    fontFamily: theme.font.primary.main,
     fontWeight:"bold",
     display:"flex", 
     justifyContent:"center", 
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   header: {
     paddingTop: 5,
     fontSize: 28,
-    fontFamily: theme.font.primary,
+    fontFamily: theme.font.primary.main,
     fontWeight: "bold",
     display: "flex",
     justifyContent: "center",
@@ -55,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   subheader: {
     paddingTop: 5,
     paddingBottom: 15,
-    fontFamily: theme.font.primary,
+    fontFamily: theme.font.primary.main,
     fontSize: 20,
     fontWeight: "regular",
     display: "flex",
@@ -68,11 +69,11 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 25, 
     paddingTop: 12, 
     paddingBottom: 12,  
-    color: "white", 
+    color: "white",
     fontSize: 16, 
     fontWeight:"bold",
     boxShadow: '0px 0px 1px rgba(0, 0, 0, 0.5)',
-    borderRadius: 0,
+    borderRadius: 5,
   }
 }));
 
@@ -110,7 +111,7 @@ export default function Survey() {
         <Box textAlign='center' className={classes.submitContainer}>
           <Button 
             variant='contained' 
-            color="primary" 
+            color="primary"
             href="/"
             className={classes.button}
             elevation={0}
