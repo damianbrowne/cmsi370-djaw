@@ -1,8 +1,15 @@
 import React from 'react';
 
+
 import {
     Typography,
     makeStyles,
+    TextField,
+    FormControlLabel,
+    Checkbox,
+    Link,
+    Grid,
+    Button
 } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
@@ -69,6 +76,57 @@ export default function Settings() {
   return (
     <div className={classes.root}>
         <Typography className={classes.title}>Account Settings</Typography>
+        <form className={classes.form} noValidate>
+            <Typography className={classes.name}>John Doe</Typography>
+            <TextField
+                variant="outlined"
+                margin="normal"
+                fullWidth
+                name="name"
+                label="Name"
+                id="name"
+                autoComplete="name"
+            />
+            <Typography className={classes.name}>johndoe123</Typography>
+            <TextField
+                variant="outlined"
+                margin="normal"
+                fullWidth
+                name="username"
+                label="Username"
+                id="username"
+                autoComplete="username"
+            />
+            <Typography className={classes.name}>johndoe123@gmail.com</Typography>
+            <TextField
+                variant="outlined"
+                margin="normal"
+                fullWidth
+                id="email"
+                label="Email Address"
+                name="email"
+                autoComplete="email"
+            />
+            <Typography className={classes.name}>John Doe</Typography>
+            <TextField
+                variant="outlined"
+                margin="normal"
+                fullWidth
+                name="password"
+                label="Password"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+            />
+            <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                className={classes.submit}
+            >
+                Save Changes
+            </Button>
+        </form>
     </div>
   );
 }
