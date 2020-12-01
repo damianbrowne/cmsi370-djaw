@@ -58,10 +58,8 @@ const useStyles = makeStyles((theme) => ({
 
     title: {
         color: theme.palette.black.main,
-        // Arial
         fontFamily: theme.font.primary,
         justifyContent:"center",
-        fontWeight: 'bold',
         paddingTop: 32,
         paddingBottom: 18,
         paddingLeft: 27,
@@ -79,14 +77,13 @@ const useStyles = makeStyles((theme) => ({
     
     menuIcon: {
         marginRight: 30, 
-        color:"#000000"
+        color:"#1a1a1a"
     }, 
 
     menuText: {
         textTransform:"none", 
         color: theme.palette.black.main,
         fontWeight:"bold",
-        // Avenir
         fontFamily: theme.font.primary,
         fontSize: 18,
     }

@@ -5,7 +5,7 @@ const theme = createMuiTheme({
         offyellow: { main: '#fff1b0'},
         text: { main: '#292F36'},
         white: {main: '#ffffff'},
-        black: {main: '#000000'},
+        black: {main: '#1a1a1a'},
         primary: {main: '#2e7eff'},
         // primary: { main: '#90C6F9' },
         secondary: {main: '#FFE054'},

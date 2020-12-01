@@ -7,6 +7,7 @@ import monkey from '../../../assets/images/monkey.jpg'
 import swoleMonkey from '../../../assets/images/buff_monkey.jpg'
 import fancyMonkey from '../../../assets/images/fancy_monkey.jfif'
 import cuteMonkey from '../../../assets/images/cute_monkey.jfif'
+import { Typography } from '@material-ui/core';
 
 
 
@@ -49,13 +50,14 @@ const useStyles = makeStyles(() => ({
     },
 
     customize: {
-        minWidth: 800,
-        maxWidth: 800,
-        maxHeight: 800,
-        minHeight: 800,
-        borderRadius: 50,
+        minWidth: 700,
+        maxWidth: 700,
+        maxHeight: 700,
+        minHeight: 700,
+        borderRadius: 20,
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
-        alignItems:"center"
+        alignItems:"center",
+        marginLeft: 20,
     },
 
     title: {
@@ -82,8 +84,18 @@ const useStyles = makeStyles(() => ({
     },
 
     paper: {
-        padding: 10,
+        // padding: 10,
         textAlign: 'center',
+        // backgroundColor: "rgba(0,0,0,0)"
+    },
+
+    container: {
+        display:"flex",
+    },
+
+    buttons: {
+        display:"flex",
+        flexDirection:"column"
     },
 
     button: {
@@ -92,11 +104,13 @@ const useStyles = makeStyles(() => ({
         paddingTop: 12, 
         paddingBottom: 12,
         backgroundColor: "white",  
-        color: "black",
+        color: "#1a1a1a",
         fontSize: 16, 
-        fontWeight:"bold",
-        boxShadow: '0px 0px 1px rgba(0, 0, 0, 0.5)',
+        // fontWeight:"bold",
+        textTransform:"none",
+        boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.25)',
         borderRadius: 5,
+        marginBottom: 25,
       }
 
 }),{ name: 'Customize' });
@@ -109,33 +123,25 @@ export default function Customize() {
 
     return (
         <div className={classes.root}>
-            <Grid container spacing={3}>
-                <Grid item xs={3}>
-                    <Button className={classes.button} onClick={() => setLink(monkey)} fullWidth>
+            <Typography className={classes.title}> Customize My Monkey</Typography>
+            <div className={classes.container}>
+                <div className={classes.buttons}>
+                    <Button className={classes.button} onClick={() => setLink(monkey)} fullWidth elevation={0}>
                         Defualt Monkey
                     </Button>
-                </Grid>
-                <Grid item xs={3}>
                     <Button className={classes.button} onClick={() => setLink(fancyMonkey)} fullWidth>
                         Fancy Monkey
                     </Button>
-                </Grid>
-                <Grid item xs={3}>
                     <Button className={classes.button} onClick={() => setLink(swoleMonkey)} fullWidth>
                         Swole Monkey
                     </Button>
-                </Grid>
-                <Grid item xs={3}>
                     <Button className={classes.button} onClick={() => setLink(cuteMonkey)} fullWidth>
                         Cute Monkey
                     </Button>
-                </Grid>
-                <Grid item xs={12}>
-                    <Paper className={classes.paper}>
-                        <img className={classes.customize} alt="Avatar" src={link}/>
-                    </Paper>
-                </Grid>
-            </Grid>
+                </div>
+                <img className={classes.customize} alt="Avatar" src={link}/>
+            </div>
+
         </div>
     );
 }

@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
 
   subheader: {
     paddingTop: 5,
-    paddingBottom: 15,
+    paddingBottom: 30,
     fontFamily: theme.font.primary.main,
     fontSize: 20,
     fontWeight: "regular",
@@ -103,7 +103,7 @@ export default function Survey() {
           <Avatar src={logo} style = {{marginRight: 10, display:"flex", alignSelf:"center",marginBottom: 25, minWidth: 100, minHeight: 100,}}/>
         </Typography>
         <Typography align="center" className={classes.header}>Don't panic!</Typography>
-        <Typography align="center" className={classes.subheader}>Answer these questions so that we can tailor your experience to your needs
+        <Typography align="center" className={classes.subheader}>Help us tailor your experience
         </Typography>
         {firstMessages.map((item, index) => (
           <Question1 question = {item} index = {index+1}> </Question1>

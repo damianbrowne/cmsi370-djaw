@@ -26,7 +26,6 @@ const useStyles = makeStyles(() => ({
         borderRadius: 0,
         minWidth: 400, 
         maxWidth: 400,
-        backgroundColor:'white'
     },
 
     cardRoot: {

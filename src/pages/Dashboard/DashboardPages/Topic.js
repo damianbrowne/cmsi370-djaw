@@ -77,7 +77,7 @@ export default function Courses() {
   return (
     <div className={classes.root}>
         <Typography className={classes.title}>
-            Exercises
+            My Exercises
         </Typography>
         <div className={classes.videoContainer}>
             <Grid container spacing={1}>
