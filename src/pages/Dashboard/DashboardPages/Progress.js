@@ -5,7 +5,7 @@ import {
     makeStyles,
 } from '@material-ui/core'
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         display:"flex",
         flexDirection:"column",
@@ -44,7 +44,8 @@ const useStyles = makeStyles(() => ({
     title: {
         fontWeight:"bold",
         fontSize: 28,
-        fontFamily:"Arial",
+        // Arial
+        fontFamily:theme.font.primary,
         paddingBottom: 25,
         paddingTop: 50,
     },
@@ -52,12 +53,14 @@ const useStyles = makeStyles(() => ({
     name: {
         fontWeight:"bold",
         fontSize: 22, 
-        fontFamily:"Avenir",
+        // Avenir
+        fontFamily:theme.font.primary,
     },
 
     username: {
         fontSize: 16, 
-        fontFamily:"Avenir",
+        // Avenir
+        fontFamily:theme.font.primary,
         color:"#CFCFCF"
     }
 

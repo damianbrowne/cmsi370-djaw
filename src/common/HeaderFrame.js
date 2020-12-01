@@ -25,6 +25,7 @@ import TuneIcon from '@material-ui/icons/Tune';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    backgroundColor: theme.palette.primary.main,
   },
 
   menuButton: {
@@ -33,10 +34,10 @@ const useStyles = makeStyles((theme) => ({
 
   title: {
     flexGrow: 1,
-    color:"white",
+    color: theme.palette.secondary.main,
     fontWeight:"bold",
     textDecoration:"none",
-    fontSize: 18,
+    fontSize: 25,
   },
 
   popoverPaper: {
@@ -44,13 +45,15 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 275,
     paddingTop: 15,
     paddingBottom: 15,
+    // backgroundColor: '#ffdf4f',
     boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.25)',
-    borderRadius: 0,
+    borderRadius: 5,
   },
 
   popoverMenu: {
     flex: 1, 
     display:"flex",
+    // backgroundColor: '#ffdf4f',
     flexDirection:"column",
   },
 
@@ -68,32 +71,40 @@ const useStyles = makeStyles((theme) => ({
 
   menuIcon: {
     marginRight: 30, 
-    color:"#000000"
+    color:theme.palette.black.main
   }, 
 
   menuText: {
     textTransform:"none", 
-    color: "#292F36", 
-    fontFamily:"Avenir",
+    color: "#292F36",
+    fontFamily:theme.font.primary.main,
     fontSize: 18,
   },
 
   popoverTitle:{
-    fontSize: 22, 
-    fontFamily:"Arial",
+    fontSize: 20, 
+    fontFamily: theme.font.primary.main,
+    fontWeight:"Bold",
     alignSelf:"center",
-    color: "#CFCFCF",
-    paddingTop: 18, 
-    paddingBottom: 18, 
+    color: theme.palette.black.main,
+    paddingTop: 8, 
+    paddingBottom: 8, 
   },
 
   signOut:{
     display:"flex",
     justifyContent:"center", 
     alignItems:"center",
-    marginTop: 0, 
-    marginBottom: 5,
+    borderRadius: 15,
+    marginBottom: 4,
   },
+
+  profileName:{
+    display: "flex",
+    alignSelf: "right",
+    color: theme.palette.black.main,
+  }
+
 }));
 
 export default function ButtonAppBar() {
@@ -129,6 +140,7 @@ export default function ButtonAppBar() {
                     <Link to="/" className={classes.title}>
                         Relab
                     </Link>
+                    {/* <Typography className={classes.profileName}>John Doe</Typography> */}
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={handleAvatarClick}>
                         <MenuIcon size="large"/>
                     </IconButton>
@@ -149,25 +161,27 @@ export default function ButtonAppBar() {
                         }}
                     >
                         <div className={classes.popoverMenu}>
-                            <Typography className={classes.popoverTitle}>My Account</Typography>
-                            <Button onClick={routeToSettings} className={classes.menuItem} disableTouchRipple>
-                                <SettingsIcon className={classes.menuIcon}/>
-                                <Typography className={classes.menuText}>Settings</Typography>
-                            </Button>
+                            <Typography className={classes.popoverTitle}>John Doe</Typography>
                             <Button onClick={routeToCustomize} className={classes.menuItem} disableTouchRipple>
                                 <TuneIcon className={classes.menuIcon}/>
                                 <Typography className={classes.menuText}>Customize Avatar</Typography>
                             </Button>
+                            <Button onClick={routeToSettings} className={classes.menuItem} disableTouchRipple>
+                              <SettingsIcon className={classes.menuIcon} />
+                              <Typography className={classes.menuText}>Settings</Typography>
+                            </Button>
                             <Divider style={{marginTop: 20, marginBottom: 20, }}/>
                             <div className={classes.signOut}>
-                                <Button 
+                                <Button
                                 // disableTouchRipple
                                 style={{
-                                  color:"#FF5B5B", 
-                                  backgroundColor: "rgba(255,0,0,0.1)", 
-                                  borderRadius: 0, 
-                                  paddingLeft: 25, 
-                                  paddingRight: 25
+                                  color: "#FFFFFF",
+                                  // color:"#FF5B5B", 
+                                  // backgroundColor: "rgba(255,0,0,0.1)", 
+                                  backgroundColor: '#FF5B5B',
+                                  borderRadius: 5, 
+                                  paddingLeft: 30, 
+                                  paddingRight: 30
                                 }} 
                                 onClick={routeToLogIn}
                                 >

@@ -25,7 +25,8 @@ const useStyles = makeStyles(() => ({
     title: {
         fontWeight:"bold",
         fontSize: 28,
-        fontFamily:"Arial",
+        // Arial
+        fontFamily:"Roboto",
         paddingBottom: 65,
         paddingTop: 50,
     },
@@ -76,7 +77,7 @@ export default function Courses() {
   return (
     <div className={classes.root}>
         <Typography className={classes.title}>
-            Live Classes
+            Exercises
         </Typography>
         <div className={classes.videoContainer}>
             <Grid container spacing={1}>

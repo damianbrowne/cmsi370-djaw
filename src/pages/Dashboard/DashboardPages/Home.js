@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: 40,
         paddingRight: 40,
         width: "100%",
+        // borderRadius: 25,
+        backgroundColor: theme.palette.offwhite.main,
+        
     },
 
     profileContainer: {
@@ -32,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
         display:"flex",
         alignItems:"center",
         flexDirection:"row",
-        backgroundColor:"white",
+        borderRadius: 5,
+        backgroundColor:theme.palette.white.main,
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)'
     },
 
@@ -55,7 +59,8 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontWeight:"bold",
         fontSize: 28,
-        fontFamily:"Arial",
+        // Arial
+        fontFamily: theme.font.primary,
         paddingBottom: 25,
         paddingTop: 50,
     },
@@ -63,13 +68,15 @@ const useStyles = makeStyles((theme) => ({
     name: {
         fontWeight:"bold",
         fontSize: 22, 
-        fontFamily:"Avenir",
+        // Avenir
+        fontFamily: theme.font.primary,
         // color:"#414141"
     },
 
     username: {
         fontSize: 16, 
-        fontFamily:"Avenir",
+        // Avenir
+        fontFamily: theme.font.primary,
         color:"#CFCFCF"
     }
 

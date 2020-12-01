@@ -14,17 +14,26 @@ import Container from '@material-ui/core/Container';
 import logo from "../../../assets/images/logo.png";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    overflow: 'hidden',
+    padding: 20,
+    minHeight: '100vh',
+    backgroundColor: theme.palette.offwhite.main,
+  },
+
   paper: {
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: theme.palette.background.main,
-    paddingTop: 30,
-    paddingBottom: 50,
+    backgroundColor: theme.palette.white.main,
+    paddingTop: 20,
+    paddingBottom: 35,
     paddingRight: 50, 
     paddingLeft: 50, 
-    boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.25)'
+    boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.25)',
+    borderRadius: 5,
   },
   avatar: {
     margin: theme.spacing(1),
@@ -40,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     color:"white", 
     fontSize: 18, 
     boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.0)',
-    borderRadius: 0,
+    borderRadius: 5,
   },
 }));
 
@@ -48,67 +57,69 @@ export default function Login() {
   const classes = useStyles();
   const toHomePage  = () => {
     window.open("/", "_self");
-    console.log("HOME")
+    // console.log("HOME")
   }
   return (
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar} src = {logo} />
-        <Typography component="h1" variant="h5">
-          Login
-        </Typography>
-        <form className={classes.form} noValidate>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
-          <Button
-            // type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-            onClick={toHomePage}
-          >
+    <div className={classes.root}>
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <div className={classes.paper}>
+          <Avatar className={classes.avatar} src={logo} />
+          {/* <Typography component="h1" variant="h5">
             Login
+        </Typography> */}
+          <form className={classes.form} noValidate>
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="email" // maybe change for backend
+              label="Email or Username"
+              name="email" // maybe change for backend
+              autoComplete="email"
+              autoFocus
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+            />
+            <FormControlLabel
+              control={<Checkbox value="remember" color="primary" />}
+              label="Remember me"
+            />
+            <Button
+              // type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              onClick={toHomePage}
+            >
+              Log In
           </Button>
-          <Grid container>
-            <Grid item xs>
-              <Link href="https://cdn.cnn.com/cnnnext/dam/assets/160107100400-monkey-selfie-exlarge-169.jpg" variant="body2">
-                Forgot password?
+            <Grid container>
+              <Grid item xs>
+                <Link href="https://cdn.cnn.com/cnnnext/dam/assets/160107100400-monkey-selfie-exlarge-169.jpg" variant="body2">
+                  Forgot password?
               </Link>
+              </Grid>
+              <Grid item>
+                <Link href="./SignUp" variant="body2">
+                  {"Create an account"}
+                </Link>
+              </Grid>
             </Grid>
-            <Grid item>
-              <Link href="./SignUp" variant="body2">
-                {"Register"}
-              </Link>
-            </Grid>
-          </Grid>
-        </form>
-      </div>
-    </Container>
+          </form>
+        </div>
+      </Container>
+    </div>
   );
 }

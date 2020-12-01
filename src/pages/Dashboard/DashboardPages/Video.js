@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
         borderRadius: 0,
         minWidth: 400, 
         maxWidth: 400,
-        backgroundColor:'transparent'
+        backgroundColor:'white'
     },
 
     cardRoot: {
@@ -64,7 +64,8 @@ const useStyles = makeStyles(() => ({
 
     title: {
         fontSize: 24,
-        fontFamily: "Avenir",
+        // Avenir
+        fontFamily: "Roboto",
         fontWeight:"bold",
         paddingTop: 8, 
         paddingBottom: 10,
@@ -79,7 +80,8 @@ const useStyles = makeStyles(() => ({
     description: {
         fontSize: 15, 
         fontWeight: "none",
-        fontFamily:"Avenir",
+        // Avenir
+        fontFamily:"Roboto",
         paddingBottom: 20,
         paddingTop: 12,
     },
@@ -144,7 +146,8 @@ const useStyles = makeStyles(() => ({
         justifySelf:"flex-end", 
         marginLeft: 25, 
         marginRight: 0,
-        fontFamily:"Avenir",
+        // Avenir
+        fontFamily:"Roboto",
         fontWeight:"bold",
     },
 
@@ -152,7 +155,8 @@ const useStyles = makeStyles(() => ({
         display:"flex", 
         textAlign:"center", 
         justifyContent:"center", 
-        fontFamily:"Arial",
+        // Avenir
+        fontFamily:"Roboto",
         fontWeight:"bold",
         fontSize: 24,
         width: "100%",

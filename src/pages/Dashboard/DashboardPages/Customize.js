@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import monkey from '../../../assets/images/monkey.jpg'
+import swoleMonkey from '../../../assets/images/buff_monkey.jpg'
+import fancyMonkey from '../../../assets/images/fancy_monkey.jfif'
+import cuteMonkey from '../../../assets/images/cute_monkey.jfif'
 
-import {
-    Typography,
-    makeStyles,
-} from '@material-ui/core'
+
+
+
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -39,13 +46,23 @@ const useStyles = makeStyles(() => ({
         minHeight: 100,
         borderRadius: 50,
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)'
+    },
 
+    customize: {
+        minWidth: 800,
+        maxWidth: 800,
+        maxHeight: 800,
+        minHeight: 800,
+        borderRadius: 50,
+        boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+        alignItems:"center"
     },
 
     title: {
         fontWeight:"bold",
         fontSize: 28,
-        fontFamily:"Arial",
+        // Avenir
+        fontFamily:"Roboto",
         paddingBottom: 25,
         paddingTop: 50,
     },
@@ -53,23 +70,72 @@ const useStyles = makeStyles(() => ({
     name: {
         fontWeight:"bold",
         fontSize: 22, 
-        fontFamily:"Avenir",
+        // Avenir
+        fontFamily:"Roboto",
     },
 
     username: {
         fontSize: 16, 
-        fontFamily:"Avenir",
+        // Avenis
+        fontFamily:"Roboto",
         color:"#CFCFCF"
-    }
+    },
 
-}),{ name: 'Progress' });
+    paper: {
+        padding: 10,
+        textAlign: 'center',
+    },
 
-export default function Progress() {
-  const classes = useStyles();
+    button: {
+        paddingLeft: 25, 
+        paddingRight: 25, 
+        paddingTop: 12, 
+        paddingBottom: 12,
+        backgroundColor: "white",  
+        color: "black",
+        fontSize: 16, 
+        fontWeight:"bold",
+        boxShadow: '0px 0px 1px rgba(0, 0, 0, 0.5)',
+        borderRadius: 5,
+      }
 
-  return (
-    <div className={classes.root}>
-        <Typography className={classes.title}>Customize Avatar</Typography>
-    </div>
-  );
+}),{ name: 'Customize' });
+
+
+
+export default function Customize() {
+    const [link, setLink] = useState(monkey);
+    const classes = useStyles();    
+
+    return (
+        <div className={classes.root}>
+            <Grid container spacing={3}>
+                <Grid item xs={3}>
+                    <Button className={classes.button} onClick={() => setLink(monkey)} fullWidth>
+                        Defualt Monkey
+                    </Button>
+                </Grid>
+                <Grid item xs={3}>
+                    <Button className={classes.button} onClick={() => setLink(fancyMonkey)} fullWidth>
+                        Fancy Monkey
+                    </Button>
+                </Grid>
+                <Grid item xs={3}>
+                    <Button className={classes.button} onClick={() => setLink(swoleMonkey)} fullWidth>
+                        Swole Monkey
+                    </Button>
+                </Grid>
+                <Grid item xs={3}>
+                    <Button className={classes.button} onClick={() => setLink(cuteMonkey)} fullWidth>
+                        Cute Monkey
+                    </Button>
+                </Grid>
+                <Grid item xs={12}>
+                    <Paper className={classes.paper}>
+                        <img className={classes.customize} alt="Avatar" src={link}/>
+                    </Paper>
+                </Grid>
+            </Grid>
+        </div>
+    );
 }

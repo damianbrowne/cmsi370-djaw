@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     overflow: 'hidden',
     padding: 4,
+    backgroundColor: theme.palette.offwhite.main,
   },
 
   surveyContainer:{
@@ -26,18 +27,41 @@ const useStyles = makeStyles((theme) => ({
   },
 
   submitContainer: {
+    borderRadius: 5,
     paddingTop: 30, 
     paddingBottom: 30,
   },
 
   title: {
-    paddingTop: 25,
-    paddingBottom: 50, 
+    paddingTop: 15,
+    paddingBottom: 0, 
     fontSize: 32, 
+    fontFamily: theme.font.primary.main,
     fontWeight:"bold",
     display:"flex", 
     justifyContent:"center", 
     flexDirection:"column"
+  },
+
+  header: {
+    paddingTop: 5,
+    fontSize: 28,
+    fontFamily: theme.font.primary.main,
+    fontWeight: "bold",
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column"
+  },
+
+  subheader: {
+    paddingTop: 5,
+    paddingBottom: 15,
+    fontFamily: theme.font.primary.main,
+    fontSize: 20,
+    fontWeight: "regular",
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column"
   },
 
   button: {
@@ -45,11 +69,11 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 25, 
     paddingTop: 12, 
     paddingBottom: 12,  
-    color: "white", 
+    color: "white",
     fontSize: 16, 
     fontWeight:"bold",
     boxShadow: '0px 0px 1px rgba(0, 0, 0, 0.5)',
-    borderRadius: 0,
+    borderRadius: 5,
   }
 }));
 
@@ -77,7 +101,9 @@ export default function Survey() {
           className={classes.title}
         >
           <Avatar src={logo} style = {{marginRight: 10, display:"flex", alignSelf:"center",marginBottom: 25, minWidth: 100, minHeight: 100,}}/>
-          Do not panic. This is a survey.
+        </Typography>
+        <Typography align="center" className={classes.header}>Don't panic!</Typography>
+        <Typography align="center" className={classes.subheader}>Answer these questions so that we can tailor your experience to your needs
         </Typography>
         {firstMessages.map((item, index) => (
           <Question1 question = {item} index = {index+1}> </Question1>
@@ -85,7 +111,7 @@ export default function Survey() {
         <Box textAlign='center' className={classes.submitContainer}>
           <Button 
             variant='contained' 
-            color="primary" 
+            color="primary"
             href="/"
             className={classes.button}
             elevation={0}
