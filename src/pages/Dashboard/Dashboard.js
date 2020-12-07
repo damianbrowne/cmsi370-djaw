@@ -105,7 +105,7 @@ const Dashboard = () => {
   }
 
   const routeToHome  = () => {
-    window.open("", "_self");
+    window.open("/", "_self");
     console.log("HOME")
   } 
 
