@@ -149,6 +149,9 @@ const Dashboard = () => {
                     <Route exact path="/Progress">
                         <Progress />
                     </Route>
+                    <Link href="./Login" variant="body2">
+                        Already have an account? Login
+                    </Link>
                     <Route exact path="/Topic">
                         <Link to={'/Topic'} activeClassName="active"></Link>
                         <a href="/Topic" class="active">Michael</a>
