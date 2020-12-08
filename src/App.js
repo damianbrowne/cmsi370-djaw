@@ -23,16 +23,16 @@ export default function App() {
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/SignUp">
+            <Route exact path="/SignUp">
               <SignUp />
             </Route>
-            <Route path="/Login">
+            <Route exact path="/Login">
               <Login />
             </Route>
-            <Route path="/Survey">
+            <Route exact path="/Survey">
               <Survey />
             </Route>
-            <Route path="/">
+            <Route exact path="/">
               <Dashboard />
             </Route>
           </Switch>

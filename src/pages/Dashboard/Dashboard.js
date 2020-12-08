@@ -9,6 +9,7 @@ import {
 import {
     Switch,
     Route,
+    HashRouter,
   } from "react-router-dom";
 
 import HeaderFrame from '../../common/HeaderFrame.js'
@@ -101,7 +102,14 @@ const Dashboard = () => {
 
   const routeToCourses  = () => {
     window.open("/Topic", "_self");
-    console.log("COURSES")
+    console.log("Courses");
+    // <HashRouter>
+    //     <Route path="/Topic" component={Topic}>
+    //         <Topic />
+    //     </Route>
+    // </HashRouter>
+    // window.open("/Topic", "_self");
+    // console.log("COURSES")
   }
 
   const routeToHome  = () => {
@@ -130,19 +138,19 @@ const Dashboard = () => {
             </div>
             <div className={classes.rightPanel}>
                 <Switch>
-                    <Route path="/Customize">
+                    <Route exact path="/Customize">
                         <Customize />
                     </Route>
-                    <Route path="/Settings">
+                    <Route exact path="/Settings">
                         <Settings />
                     </Route>
-                    <Route path="/Progress">
+                    <Route exactpath="/Progress">
                         <Progress />
                     </Route>
-                    <Route path="/Topic">
+                    <Route exact path="/Topic">
                         <Topic />
                     </Route>
-                    <Route path="/">
+                    <Route exact path="/">
                         <Home />
                     </Route>
                 </Switch>
