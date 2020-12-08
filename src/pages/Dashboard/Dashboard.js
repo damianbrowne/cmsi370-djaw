@@ -146,10 +146,12 @@ const Dashboard = () => {
                         <a href="/Settings" class="active">Michael</a>
                         <Settings />
                     </Route>
-                    <Route exactpath="/Progress">
+                    <Route exact path="/Progress">
                         <Progress />
                     </Route>
                     <Route exact path="/Topic">
+                        <Link to={'/Topic'} activeClassName="active"></Link>
+                        <a href="/Topic" class="active">Michael</a>
                         <Topic />
                     </Route>
                     <Route exact path="/">
