@@ -128,7 +128,7 @@ const Dashboard = () => {
                 <Typography className={classes.title}>MENU</Typography>
                 <Button onClick={routeToHome} className={classes.menuItem} disableTouchRipple>
                     <HomeIcon className={classes.menuIcon}/>
-                    <Typography className={classes.menuText}>Home</Typography>
+                    <Typography className={classes.menuText}>REE</Typography>
                 </Button>
                 <Button onClick={routeToCourses} className={classes.menuItem} disableTouchRipple>
                     <AccessibilityNewIcon className={classes.menuIcon}/>
