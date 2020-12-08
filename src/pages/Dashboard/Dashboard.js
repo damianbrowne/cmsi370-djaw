@@ -140,13 +140,11 @@ const Dashboard = () => {
                 </Button> */}
             </div>
             <div className={classes.rightPanel}>
-                <Switch>
+                {/* <Switch>
                     <Route exact path="/Customize">
                         <Customize />
                     </Route>
                     <Route exact path="/Settings">
-                        <Link to={'/Settings'} activeClassName="active"></Link>
-                        <a href="/Settings" class="active">Michael</a>
                         <Settings />
                     </Route>
                     <Route exact path="/Progress">
@@ -158,7 +156,7 @@ const Dashboard = () => {
                     <Route exact path="/">
                         <Home />
                     </Route>
-                </Switch>
+                </Switch> */}
             </div>
         </div>
     </div>
