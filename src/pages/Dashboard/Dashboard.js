@@ -142,6 +142,8 @@ const Dashboard = () => {
                         <Customize />
                     </Route>
                     <Route exact path="/Settings">
+                        <Link to={'/Settings'} activeClassName="active"></Link>
+                        <a href="/Settings" class="active">Michael</a>
                         <Settings />
                     </Route>
                     <Route exactpath="/Progress">
