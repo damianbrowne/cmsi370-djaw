@@ -101,9 +101,6 @@ const Dashboard = () => {
   }
 
   const routeToCourses  = () => {
-    <Route exact path="/Topic">
-        <Topic/>
-    </Route>
     window.open("/Topic", "_self");
     console.log("Courses");
     // <HashRouter>
@@ -128,7 +125,7 @@ const Dashboard = () => {
                 <Typography className={classes.title}>MENU</Typography>
                 <Button onClick={routeToHome} className={classes.menuItem} disableTouchRipple>
                     <HomeIcon className={classes.menuIcon}/>
-                    <Typography className={classes.menuText}>REE</Typography>
+                    <Typography className={classes.menuText}>Home</Typography>
                 </Button>
                 <Button onClick={routeToCourses} className={classes.menuItem} disableTouchRipple>
                     <AccessibilityNewIcon className={classes.menuIcon}/>
@@ -139,25 +136,25 @@ const Dashboard = () => {
                     <Typography className={classes.menuText}>Progress</Typography>
                 </Button> */}
             </div>
-            {/* <div className={classes.rightPanel}>
+            <div className={classes.rightPanel}>
                 <Switch>
-                    <Route exact path="/Customize">
+                    <Route path="/Customize">
                         <Customize />
                     </Route>
-                    <Route exact path="/Settings">
+                    <Route path="/Settings">
                         <Settings />
                     </Route>
-                    <Route exact path="/Progress">
+                    <Route path="/Progress">
                         <Progress />
                     </Route>
-                    <Route exact path="/Topic">
+                    <Route path="/Topic">
                         <Topic />
                     </Route>
-                    <Route exact path="/">
+                    <Route path="/">
                         <Home />
                     </Route>
                 </Switch>
-            </div> */}
+            </div>
         </div>
     </div>
   );
