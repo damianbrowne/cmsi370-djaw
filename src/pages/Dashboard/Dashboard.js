@@ -139,8 +139,8 @@ const Dashboard = () => {
                     <Typography className={classes.menuText}>Progress</Typography>
                 </Button> */}
             </div>
-            <div className={classes.rightPanel}>
-                {/* <Switch>
+            {/* <div className={classes.rightPanel}>
+                <Switch>
                     <Route exact path="/Customize">
                         <Customize />
                     </Route>
@@ -156,8 +156,8 @@ const Dashboard = () => {
                     <Route exact path="/">
                         <Home />
                     </Route>
-                </Switch> */}
-            </div>
+                </Switch>
+            </div> */}
         </div>
     </div>
   );
