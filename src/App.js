@@ -12,7 +12,13 @@ import theme from './assets/theme.js';
 import SignUp from './pages/Login/LoginPages/SignUp.js';
 import Login from './pages/Login/LoginPages/Login.js';
 import Dashboard from './pages/Dashboard/Dashboard.js';
-import Survey from './pages/Survey/Survey.js'
+import Survey from './pages/Survey/Survey.js';
+import HeaderFrame from './common/HeaderFrame.js'
+import Home from './pages/Dashboard/DashboardPages/Home.js';
+import Progress from './pages/Dashboard/DashboardPages/Progress.js';
+import Topic from './pages/Dashboard/DashboardPages/Topic.js';
+import Settings from './pages/Dashboard/DashboardPages/Settings.js';
+import Customize from './pages/Dashboard/DashboardPages/Customize.js';
 
 export default function App() {
   return (
@@ -26,14 +32,23 @@ export default function App() {
             <Route path="/SignUp">
               <SignUp />
             </Route>
-            <Route path="/Login">
-              <Login />
+            <Route path="/Home">
+              <Dashboard />
             </Route>
             <Route path="/Survey">
               <Survey />
             </Route>
-            <Route path="/">
+            <Route path="/Topic">
               <Dashboard />
+            </Route>
+            <Route path="/Settings">
+              <Dashboard />
+            </Route>
+            <Route path="/Customize">
+              <Dashboard />
+            </Route>
+            <Route path="/">
+              <Login />
             </Route>
           </Switch>
         </div>

@@ -95,7 +95,6 @@ const useStyles = makeStyles((theme) => ({
     display:"flex",
     justifyContent:"center", 
     alignItems:"center",
-    borderRadius: 0,
     marginBottom: 4,
   },
 

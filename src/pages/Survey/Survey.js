@@ -77,16 +77,16 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const firstMessages = ["Ideo sumi sae ima ente rari novi?", 
-                       "Contrariae aliquoties affirmabam parentibus ad deprehendi mo?", 
-                       "Ac nunc illi ii fide?",
-                       "Judicio finitae invenio eam claudam fuerunt sed vel majoris?",
-                       "Enitar fingam scioli ut latera im habens ac me?",
-                       "Rem summum ope eae notatu sicuti calida causas?",
-                        "Machinam assidere circulum in facultas ab?",
-                        "Haberem volebam tur verarum mallent etc una seu referam ignotae?",
-                        "Heri sic rum ante sine quas fas modi?", 
-                        "Nos creasse pendere crescit angelos etc?"]
+const firstMessages = [ "...stand and balance on each foot for 10 seconds", 
+                        "...walk along a line", 
+                        "...hang and move across monkey bars without support",
+                        "...hop on one foot 10 times",
+                        "...jump forward with both feet together",
+                        "...kick a ball toward a target",
+                        "...catch a tennis ball using hands only (no trapping against chest)",
+                        "...throw a ball stepping forward with leg on the same side as the throwing arm",
+                        "...jump rope", 
+                        "...riding a bike without training wheels"]
 
 
 export default function Survey() {
@@ -102,17 +102,17 @@ export default function Survey() {
         >
           <Avatar src={logo} style = {{marginRight: 10, display:"flex", alignSelf:"center",marginBottom: 25, minWidth: 100, minHeight: 100,}}/>
         </Typography>
-        <Typography align="center" className={classes.header}>Don't panic!</Typography>
-        <Typography align="center" className={classes.subheader}>Help us tailor your experience
-        </Typography>
+        <Typography align="center" className={classes.header}>My child can...</Typography>
+        <Typography align="center" className={classes.subheader}>Answer these questions so that we can help provide experience tailored to your child's needs.</Typography>
         {firstMessages.map((item, index) => (
           <Question1 question = {item} index = {index+1}> </Question1>
-        ))}   
+        ))}
+          <Question2 question = {"On a scale of 1-5 (1 being very poor, and 5 being very good), my child's ability to run around while maintaining balance is a"} index = {11}></Question2>
         <Box textAlign='center' className={classes.submitContainer}>
           <Button 
             variant='contained' 
             color="primary"
-            href="/"
+            href="/Home"
             className={classes.button}
             elevation={0}
           >

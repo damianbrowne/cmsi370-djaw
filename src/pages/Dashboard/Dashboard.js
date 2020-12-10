@@ -113,7 +113,7 @@ const Dashboard = () => {
   }
 
   const routeToHome  = () => {
-    window.open("/", "_self");
+    window.open("/Home", "_self");
     console.log("HOME")
   } 
 
@@ -150,7 +150,7 @@ const Dashboard = () => {
                     <Route path="/Topic">
                         <Topic />
                     </Route>
-                    <Route path="/">
+                    <Route path="/Home">
                         <Home />
                     </Route>
                 </Switch>

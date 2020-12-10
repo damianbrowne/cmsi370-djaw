@@ -45,28 +45,28 @@ export default function Courses() {
       <React.Fragment>
         <Grid item xs={4}>
             <Video 
-                title="Yoga Therapy" 
-                description="Start this lesson with yoga stretches etc and work your way up!" 
+                title="Yoga Warmup with Animals!"
+                description="Get your day started with some yoga... with animals!" 
                 image={yogaImage}
-                link="https://www.youtube.com/embed/L_xrDAtykMI"
+                link="https://www.youtube.com/embed/5XCQfYsFa3Q"
                 percent={35}
             />
         </Grid>
         <Grid item xs={4}>
             <Video 
-                title="Ball Coordination" 
-                description="Learn the basics of hand-eye coordination and master these skills." 
+                title="Kick the Ball!" 
+                description="Follow along to the rhythm and up your ball coordination!"
                 image={ballImage}
-                link="https://www.youtube.com/embed/faVOAI0hKrA"
+                link="https://www.youtube.com/embed/ePpqEeUErUc"
                 percent={76}
             />
         </Grid>
         <Grid item xs={4}>
             <Video 
-                title="Fun Stretches" 
-                description="Go through some fun stretches to start the day right." 
+                title="Fly Like a Bird!" 
+                description="Jumping jacks the fun way! Practice coordination and get moving!" 
                 image={stretchImage}
-                link="https://www.youtube.com/embed/_IoYLhrTBqY"
+                    link="https://www.youtube.com/embed/sJ9NBBLU6lY"
                 percent={0}
             />
         </Grid>

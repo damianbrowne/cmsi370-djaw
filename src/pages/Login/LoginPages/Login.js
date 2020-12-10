@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 3),
     color:"white", 
     fontSize: 18, 
-    boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.0)',
+    boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.1)',
     borderRadius: 5,
   },
 }));
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Login() {
   const classes = useStyles();
   const toHomePage  = () => {
-    window.open("/", "_self");
+    window.open("/Home", "_self");
     // console.log("HOME")
   }
   return (

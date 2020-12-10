@@ -5,6 +5,7 @@ import {
     Avatar,
     Button,
     Paper,
+    ButtonGroup,
     TextField,
     Grid,
     Typography,
@@ -22,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: 40,
         paddingRight: 40,
         width: "100%",
-        // borderRadius: 25,
         backgroundColor: theme.palette.offwhite.main,
         
     },
@@ -60,7 +60,6 @@ const useStyles = makeStyles((theme) => ({
         fontWeight:"bold",
         fontSize: 28,
         // Arial
-        fontFamily: theme.font.primary,
         paddingBottom: 25,
         paddingTop: 50,
     },
@@ -78,13 +77,26 @@ const useStyles = makeStyles((theme) => ({
         // Avenir
         fontFamily: theme.font.primary,
         color:"#CFCFCF"
-    }
+    },
+
+    button: {
+        fontSize: 16,
+    },
 
 }),{ name: 'Home' });
 
 export default function Home() {
   const classes = useStyles();
   let { id } = useParams()
+
+    const toCustomize = () => {
+        window.open("/Customize", "_self");
+        console.log("CUSTOMIZE")
+    }
+    const toSettings = () => {
+        window.open("/Settings", "_self");
+        console.log("CUSTOMIZE")
+    }
 
   return (
     <div className={classes.root}>
@@ -96,6 +108,10 @@ export default function Home() {
                 <Typography className={classes.username}>@johndoe123</Typography>
                 {/* <Button>Edit Profile</Button> */}
             </div>
+            <ButtonGroup variant="text" color="black" aria-label="text black button group" style={{marginLeft: 720,}}>
+                  <Button onClick={toCustomize} disableTouchRipple className={classes.button}>Customize</Button>
+                  <Button onClick={toSettings} disableTouchRipple className={classes.button}>Settings</Button>
+            </ButtonGroup>
         </div>
     </div>
   );

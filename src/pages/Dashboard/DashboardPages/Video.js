@@ -231,7 +231,7 @@ const Video = props => {
                     </div>
                     :
                     <Button className={classes.progress} elevation={0} disableTouchRipple onClick={handleOpen}>
-                        <Typography className={classes.start}>Start Class</Typography>
+                        <Typography className={classes.start}>Let's go!</Typography>
                     </Button>
                 }
         </div>

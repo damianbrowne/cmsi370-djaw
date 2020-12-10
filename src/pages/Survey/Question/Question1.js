@@ -30,8 +30,8 @@ const classes = useStyles();
               <Grid item xs zeroMinWidth>
                 <Typography>{props.question}</Typography>
                 <RadioGroup row>
-                  <FormControlLabel value={'True'} control={<Radio />} label = {'True'} />
-                  <FormControlLabel value={'False'} control={<Radio />} label = {'False'} />
+                  <FormControlLabel value={'Yes'} control={<Radio />} label = {'Yes'} />
+                  <FormControlLabel value={'No'} control={<Radio />} label = {'No'} />
                 </RadioGroup>
               </Grid>
             </Grid>

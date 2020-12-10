@@ -11,9 +11,11 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    maxWidth: 400,
+    maxWidth: 500,
+    minWidth: 500,
     margin: `${theme.spacing(1)}px auto`,
-    padding: theme.spacing(2),
+    padding: theme.spacing(4),
+    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)'
   },
   formControl: {
     margin: theme.spacing(3),
@@ -24,15 +26,14 @@ const Question2 = (props) => {
   const classes = useStyles();
     return (
         <Paper className={classes.paper}>
-            <Grid container wrap="nowrap">
+            <Grid container spacing={2}>
               <Grid item>
-                <Avatar></Avatar>
+                <Avatar>{props.index}</Avatar>
               </Grid>
               <Grid item xs zeroMinWidth>
-                <Typography noWrap>{props.question}</Typography>
-
+                <Typography>{props.question}</Typography>
                 <RadioGroup row>
-                  {[1, 2, 3, 4, 5].map((item) => (
+                  {["1", "2", "3", "4", "5"].map((item) => (
                     <FormControlLabel value={`${item}`} control={<Radio />} label = {`${item}`} />
                   ))}    
                 </RadioGroup>
