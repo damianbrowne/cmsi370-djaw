@@ -45,7 +45,7 @@ export default function Courses() {
       <React.Fragment>
         <Grid item xs={4}>
             <Video 
-                title="Yoga Warmup with Animals!"
+                title="Yoga Warmup with Animals"
                 description="Get your day started with some yoga... with animals!" 
                 image={yogaImage}
                 link="https://www.youtube.com/embed/5XCQfYsFa3Q"
@@ -54,7 +54,7 @@ export default function Courses() {
         </Grid>
         <Grid item xs={4}>
             <Video 
-                title="Kick the Ball!" 
+                title="Kick the Ball" 
                 description="Follow along to the rhythm and up your ball coordination!"
                 image={ballImage}
                 link="https://www.youtube.com/embed/ePpqEeUErUc"
@@ -63,7 +63,7 @@ export default function Courses() {
         </Grid>
         <Grid item xs={4}>
             <Video 
-                title="Fly Like a Bird!" 
+                title="Fly Like a Bird"
                 description="Jumping jacks the fun way! Practice coordination and get moving!" 
                 image={stretchImage}
                     link="https://www.youtube.com/embed/sJ9NBBLU6lY"

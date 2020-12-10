@@ -167,7 +167,7 @@ export default function ButtonAppBar() {
                             </Button>
                             <Button onClick={routeToSettings} className={classes.menuItem} disableTouchRipple>
                               <SettingsIcon className={classes.menuIcon} />
-                              <Typography className={classes.menuText}>Settings</Typography>
+                              <Typography className={classes.menuText}>Profile Settings</Typography>
                             </Button>
                             <Divider style={{marginTop: 20, marginBottom: 20, }}/>
                             <div className={classes.signOut}>
